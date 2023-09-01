@@ -87,7 +87,6 @@ const MyWishBoard = () => {
   };
 
   const [state, refetch] = useAsync(productReq, []);
-
   const { loading, data, error } = state;
 
   useEffect(() => {

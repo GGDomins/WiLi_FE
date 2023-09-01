@@ -26,6 +26,7 @@ const SearchWishBoard = () => {
         setErrorMessage('존재하지 않는 제품입니다.');
         return;
       }
+      setErrorMessage('');
 
       const images = data.data.images;
       const products = data.data.posts;
