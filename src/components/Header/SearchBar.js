@@ -23,7 +23,7 @@ const SearchBar = () => {
   const querySubmitHandler = async (event) => {
     event.preventDefault();
 
-    navigate(`/search?query=${query}`);
+    window.location.replace(`/search?query=${query}`);
   };
 
   return (
