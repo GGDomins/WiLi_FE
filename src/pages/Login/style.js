@@ -73,6 +73,18 @@ export const LoginMessage = styled.p`
   @media ${device.wideLaptop} {
     font-size: 22px;
   }
+
+  @media ${device.narrowLaptop} {
+    font-size: 20px;
+  }
+
+  @media ${device.tablet} {
+    font-size: 18px;
+  }
+
+  @media ${device.mobile} {
+    font-size: 16px;
+  }
 `;
 
 export const ButtonContainer = styled.div`
@@ -109,6 +121,14 @@ export const ButtonInnerContainer = styled.div`
 
   @media ${device.wideLaptop} {
     width: 250px;
+  }
+
+  @media ${device.tablet} {
+    width: 200px;
+  }
+
+  @media ${device.mobile} {
+    width: 189px;
   }
 `;
 
