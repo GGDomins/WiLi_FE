@@ -30,6 +30,14 @@ export const Logo = styled.h1`
   @media ${device.narrowLaptop} {
     font-size: 100px;
   }
+
+  @media ${device.tablet} {
+    font-size: 80px;
+  }
+
+  @media ${device.mobile} {
+    font-size: 60px;
+  }
 `;
 
 export const TitleMessage = styled.p`
@@ -44,6 +52,15 @@ export const TitleMessage = styled.p`
 
   @media ${device.narrowLaptop} {
     font-size: 23px;
+  }
+
+  @media ${device.tablet} {
+    font-size: 20px;
+  }
+
+  @media ${device.mobile} {
+    font-size: 16px;
+    margin: 0 0 62px 0;
   }
 `;
 
@@ -73,6 +90,16 @@ export const ButtonContainer = styled.div`
     width: 500px;
     height: 250px;
   }
+
+  @media ${device.tablet} {
+    width: 400px;
+    height: 200px;
+  }
+
+  @media ${device.mobile} {
+    width: 325px;
+    height: 220px;
+  }
 `;
 
 export const ButtonInnerContainer = styled.div`
@@ -98,6 +125,14 @@ export const Kakao = styled.div`
   @media ${device.wideLaptop} {
     height: 60px;
   }
+
+  @media ${device.tablet} {
+    height: 50px;
+  }
+
+  @media ${device.mobile} {
+    height: 47px;
+  }
 `;
 
 export const Naver = styled.div`
@@ -112,5 +147,13 @@ export const Naver = styled.div`
 
   @media ${device.wideLaptop} {
     height: 60px;
+  }
+
+  @media ${device.tablet} {
+    height: 50px;
+  }
+
+  @media ${device.mobile} {
+    height: 47px;
   }
 `;
