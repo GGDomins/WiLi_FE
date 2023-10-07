@@ -15,11 +15,10 @@ const useAuth = () => {
   const [state, refetch] = useAsync(authReq, []);
   const { loading, response, error } = state;
 
-  const data = response.data.data;
-
   useEffect(() => {
     const fetch = async () => {
       if (response) {
+        const data = response.data.data;
         console.log(data.snsId);
         console.log('auth successful');
         localStorage.setItem('snsId', data.snsId);
