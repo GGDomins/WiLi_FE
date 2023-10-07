@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 
 import useAsync from '../../hooks/useAsync';
 import { randomProductReq } from '../../utils/productAPIs/productAPIs';
