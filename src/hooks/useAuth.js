@@ -18,10 +18,9 @@ const useAuth = () => {
   useEffect(() => {
     const fetch = async () => {
       if (response) {
-        const data = response.data.data;
-        console.log(data.snsId);
+        console.log(response.data.data.snsId);
         console.log('auth successful');
-        localStorage.setItem('snsId', data.snsId);
+        localStorage.setItem('snsId', response.data.data.snsId);
         setIsAuthed(true);
       }
 
@@ -34,7 +33,7 @@ const useAuth = () => {
           const res = await refreshReq();
           if (res) {
             console.log('refresh successful');
-            localStorage.setItem('snsId', data.snsId);
+            localStorage.setItem('snsId', response.data.data.snsId);
             setIsAuthed(true);
           } else {
             console.log('refresh failed');
