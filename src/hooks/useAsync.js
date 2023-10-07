@@ -5,19 +5,19 @@ const reducer = (state, action) => {
     case 'LOADING':
       return {
         loading: true,
-        data: null,
+        response: null,
         error: null,
       };
     case 'SUCCESS':
       return {
         loading: false,
-        data: action.data,
+        response: action.data,
         error: null,
       };
     case 'ERROR':
       return {
         loading: false,
-        data: null,
+        response: null,
         error: action.error,
       };
     default:
