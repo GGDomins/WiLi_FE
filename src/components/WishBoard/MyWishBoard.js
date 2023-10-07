@@ -87,13 +87,15 @@ const MyWishBoard = () => {
   };
 
   const [state, refetch] = useAsync(productReq, []);
-  const { loading, data, error } = state;
+  const { loading, response, error } = state;
+
+  const data = response.data.data;
 
   useEffect(() => {
-    if (data) {
-      const message = data.data.message;
+    if (response) {
+      const message = data.message;
 
-      if (message === '제품 없음') {
+      if (message === 'no product found') {
         setErrorMessage('제품 없음');
         return;
       }

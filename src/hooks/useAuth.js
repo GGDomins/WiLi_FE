@@ -13,12 +13,14 @@ const useAuth = () => {
   const navigate = useNavigate();
 
   const [state, refetch] = useAsync(authReq, []);
-  const { loading, data, error } = state;
+  const { loading, response, error } = state;
+
+  const data = response.data.data;
 
   useEffect(() => {
     const fetch = async () => {
-      if (data) {
-        console.log(data.data.data.snsId);
+      if (response) {
+        console.log(data.snsId);
         console.log('auth successful');
         localStorage.setItem('snsId', data.snsId);
         setIsAuthed(true);
