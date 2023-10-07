@@ -49,7 +49,7 @@ const RandomWishBoard = () => {
 
   useEffect(() => {
     randomProductReqHandler();
-  }, []);
+  }, [randomProductReqHandler]);
 
   let content;
 
