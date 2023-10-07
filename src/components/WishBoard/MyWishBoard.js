@@ -93,7 +93,7 @@ const MyWishBoard = () => {
     if (response) {
       const message = response.data.message;
 
-      if (message === 'no product found') {
+      if (message === 'item fetch failed') {
         setErrorMessage('제품 없음');
         return;
       }
