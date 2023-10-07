@@ -1,10 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 import Label from '../../components/UI/InputLabel/InputLabel';
 import InputBox from '../../components/UI/InputBox/InputBox';
 import Button from '../../components/UI/Button/Button';
 import InputGroup from '../../components/UI/InputGroup/InputGroup';
 import FavSelect from '../../components/UI/FavButton/FavButton';
+
+import axios from 'axios';
 
 import {
   ButtonContainer,
@@ -16,10 +18,23 @@ import {
   FavContainer,
 } from './style';
 
+import {
+  DEFAULT,
+  SUCCESS,
+  FAIL,
+  CLICKED,
+  NOT_CLICKED,
+} from '../../styles/colors/colors';
+
 import { ReactComponent as LeftIcon } from '../../assets/icons/left.svg';
 import { ReactComponent as RightIcon } from '../../assets/icons/right.svg';
 
 const Step1 = ({ setStep, setUserInfo, userInfo }) => {
+  const [isUsable, setIsUsable] = useState(null);
+
+  const timeoutId = useRef(null);
+  const firstUpdate = useRef(true);
+
   const formChangeHandler = (e) => {
     setUserInfo({
       ...userInfo,

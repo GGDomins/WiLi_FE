@@ -26,6 +26,19 @@ import {
 } from '../../styles/colors/colors';
 
 const Step2 = ({ setStep, setFav, fav }) => {
+  const favorites = [
+    '패션 / 의류',
+    '생활용품',
+    '주방용품',
+    '전자제품',
+    '식품 / 식재료',
+    '인테리어',
+    '도서 / 음반',
+    '반려동물품',
+    '스포츠 / 레저',
+    '기타',
+  ];
+
   const favChangeHandler = (event) => {
     const target = event.target;
     const newFavValue = !fav[target.innerText];
