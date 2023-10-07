@@ -98,8 +98,8 @@ const MyWishBoard = () => {
         return;
       }
 
-      const images = data.data.images;
-      const products = data.data.posts;
+      const images = data.images;
+      const products = data.posts;
 
       let imageUrls = images.map((base64String) => {
         return 'data:image/png;base64,' + base64String;
