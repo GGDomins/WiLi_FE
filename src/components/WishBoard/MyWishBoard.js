@@ -89,19 +89,17 @@ const MyWishBoard = () => {
   const [state, refetch] = useAsync(productReq, []);
   const { loading, response, error } = state;
 
-  const data = response.data.data;
-
   useEffect(() => {
     if (response) {
-      const message = data.message;
+      const message = response.data.message;
 
       if (message === 'no product found') {
         setErrorMessage('제품 없음');
         return;
       }
 
-      const images = data.images;
-      const products = data.posts;
+      const images = response.data.data.images;
+      const products = response.data.data.posts;
 
       let imageUrls = images.map((base64String) => {
         return 'data:image/png;base64,' + base64String;
@@ -123,7 +121,7 @@ const MyWishBoard = () => {
       const sortedProducts = sortProducts(productObjs);
       setMyProducts(sortedProducts);
     }
-  }, [data, sortType, selectedFav, selectedMonth]);
+  }, [response, sortType, selectedFav, selectedMonth]);
 
   return (
     <>
@@ -144,7 +142,7 @@ const MyWishBoard = () => {
         />
       )}
       {/* {loading && <Loading />} */}
-      {data && !errorMessage && <WishBoard productsData={myProducts} />}
+      {response && !errorMessage && <WishBoard productsData={myProducts} />}
       {errorMessage && <p>현재 추가된 제품이 없습니다.</p>}
     </>
   );
