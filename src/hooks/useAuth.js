@@ -18,9 +18,9 @@ const useAuth = () => {
   useEffect(() => {
     const fetch = async () => {
       if (data) {
-        console.log(data.data.snsId);
+        console.log(data.snsId);
         console.log('auth successful');
-        localStorage.setItem('snsId', data.data.snsId);
+        localStorage.setItem('snsId', data.snsId);
         setIsAuthed(true);
       }
 
