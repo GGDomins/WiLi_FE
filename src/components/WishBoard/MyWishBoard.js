@@ -123,6 +123,16 @@ const MyWishBoard = () => {
     }
   }, [response, sortType, selectedFav, selectedMonth]);
 
+  let content;
+
+  if (errorMessage) {
+    content = <p>현재 추가된 제품이 없습니다.</p>;
+  }
+
+  if (response && !errorMessage) {
+    content = <WishBoard productsData={myProducts} />;
+  }
+
   return (
     <>
       <ToolBar onChooseSort={sortHandler} />
@@ -141,9 +151,7 @@ const MyWishBoard = () => {
           width='120px'
         />
       )}
-      {/* {loading && <Loading />} */}
-      {response && !errorMessage && <WishBoard productsData={myProducts} />}
-      {errorMessage && <p>현재 추가된 제품이 없습니다.</p>}
+      {content}
     </>
   );
 };
