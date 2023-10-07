@@ -47,12 +47,17 @@ const RandomWishBoard = () => {
     }
   }, [response]);
 
-  return (
-    <>
-      {response && !errorMessage && <WishBoard productsData={randomProducts} />}
-      {errorMessage && <p>{errorMessage}</p>}
-    </>
-  );
+  let content;
+
+  if (errorMessage) {
+    content = <p>{errorMessage}</p>;
+  }
+
+  if (response && !errorMessage) {
+    content = <WishBoard productsData={randomProducts} />;
+  }
+
+  return <>{content}</>;
 };
 
 export default RandomWishBoard;

@@ -55,12 +55,17 @@ const SearchWishBoard = () => {
     }
   }, [response, query]);
 
-  return (
-    <>
-      {errorMessage && <p>{errorMessage}</p>}
-      {response && !errorMessage && <WishBoard productsData={searchProducts} />}
-    </>
-  );
+  let content;
+
+  if (errorMessage) {
+    content = <p>{errorMessage}</p>;
+  }
+
+  if (response && !errorMessage) {
+    content = <WishBoard productsData={searchProducts} />;
+  }
+
+  return <>{content}</>;
 };
 
 export default SearchWishBoard;
