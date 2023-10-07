@@ -83,7 +83,7 @@ const Profile = () => {
 
         console.log(response);
 
-        const info = response.data.data;
+        const info = response.data.data.member_Info;
 
         info.favorites.split(',').forEach((fav) => {
           setFav((prev) => ({ ...prev, [fav]: true }));
