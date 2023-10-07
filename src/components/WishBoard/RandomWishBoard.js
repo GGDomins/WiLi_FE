@@ -10,17 +10,18 @@ const RandomWishBoard = () => {
   const [errorMessage, setErrorMessage] = useState('');
 
   const [state, refetch] = useAsync(randomProductReq, []);
-  const { loading, data, error } = state;
+  const { loading, response, error } = state;
 
   useEffect(() => {
-    if (data) {
-      if (data.data.message === '제품 없음') {
+    if (response) {
+      const data = response.data.data;
+      if (data.message === 'no product found') {
         setErrorMessage('나의 관심사와 매칭되는 제품이 없습니다.');
         return;
       }
 
-      const images = data.data.images;
-      const products = data.data.posts;
+      const images = data.images;
+      const products = data.posts;
 
       console.log(images);
       console.log(products);
@@ -44,11 +45,11 @@ const RandomWishBoard = () => {
 
       console.log(randomProducts);
     }
-  }, [data]);
+  }, [response]);
 
   return (
     <>
-      {data && !errorMessage && <WishBoard productsData={randomProducts} />}
+      {response && !errorMessage && <WishBoard productsData={randomProducts} />}
       {errorMessage && <p>{errorMessage}</p>}
     </>
   );

@@ -48,10 +48,10 @@ const EditProduct = () => {
     const req = async () => {
       const response = await productInfoReq(id);
 
-      const info = JSON.parse(response.data.post);
+      const info = JSON.parse(response.data.data.post);
 
       setProductInfo({
-        image: 'data:image/png;base64,' + response.data.image,
+        image: 'data:image/png;base64,' + response.data.data.image,
         brandName: info.brandName,
         productName: info.productName,
         category: info.category,

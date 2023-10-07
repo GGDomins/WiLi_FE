@@ -16,15 +16,15 @@ const KakaoRedirection = () => {
     return kakaoLoginReq(KAKAO_CODE);
   }, [KAKAO_CODE]);
 
-  const { loading, data, error } = state;
+  const { loading, response, error } = state;
 
   if (loading) return <p>로그인 중입니다. 잠시만 기다려주세요.</p>;
   if (error) {
-    const data = error.response.data;
+    const data = error.response.data.data;
     navigate('/signup', { state: { data: data } });
   }
-  if (data) {
-    const accessToken = data.headers['accesstoken'];
+  if (response) {
+    const accessToken = response.headers['accesstoken'];
     console.log(accessToken);
     localStorage.setItem('accessToken', accessToken);
 

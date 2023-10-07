@@ -68,12 +68,12 @@ const ProductInfo = ({ id, onClose }) => {
     const req = async () => {
       const response = await productInfoReq(id);
 
-      const info = JSON.parse(response.data.post);
+      const info = JSON.parse(response.data.data.post);
       const isMyPost = response.headers['ismypost'];
 
       setProductInfo({
         isMyPost: isMyPost,
-        image: 'data:image/png;base64,' + response.data.image,
+        image: 'data:image/png;base64,' + response.data.data.image,
         brandName: info.brandName,
         productName: info.productName,
         category: info.category,

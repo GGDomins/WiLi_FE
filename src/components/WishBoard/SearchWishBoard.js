@@ -15,20 +15,21 @@ const SearchWishBoard = () => {
   const [errorMessage, setErrorMessage] = useState('');
 
   const [state, refetch] = useAsync(() => searchProductReq(query), []);
-  const { loading, data, error } = state;
+  const { loading, response, error } = state;
 
   useEffect(() => {
-    if (data) {
-      if (data.data.message === '유저 없음') {
+    if (response) {
+      const data = response.data.data;
+      if (data.message === '유저 없음') {
         setErrorMessage('존재하지 않는 유저입니다.');
         return;
-      } else if (data.data.message === '제품 없음') {
+      } else if (data.message === '제품 없음') {
         setErrorMessage('존재하지 않는 제품입니다.');
         return;
       }
 
-      const images = data.data.images;
-      const products = data.data.posts;
+      const images = data.images;
+      const products = data.posts;
 
       console.log(images);
       console.log(products);
@@ -52,12 +53,12 @@ const SearchWishBoard = () => {
 
       console.log(searchProducts);
     }
-  }, [data, query]);
+  }, [response, query]);
 
   return (
     <>
       {errorMessage && <p>{errorMessage}</p>}
-      {data && !errorMessage && <WishBoard productsData={searchProducts} />}
+      {response && !errorMessage && <WishBoard productsData={searchProducts} />}
     </>
   );
 };
