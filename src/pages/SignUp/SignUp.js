@@ -13,8 +13,8 @@ import Button from '../../components/UI/Button/Button';
 import InputGroup from '../../components/UI/InputGroup/InputGroup';
 import FavSelect from '../../components/UI/FavButton/FavButton';
 
-import { ReactComponent as LeftIcon } from '../../assets/icons/left.svg';
-import { ReactComponent as RightIcon } from '../../assets/icons/right.svg';
+import Step1 from './Step1';
+import Step2 from './Step2';
 
 import {
   DEFAULT,
@@ -173,29 +173,6 @@ const SignUp = () => {
     });
   }, []);
 
-  useEffect(() => {
-    if (firstUpdate.current) {
-      firstUpdate.current = false;
-      return;
-    }
-
-    if (userInfo.username === '') {
-      setIsUsable(null);
-      return;
-    }
-
-    const autoCheckUsername = async () => {
-      clearTimeout(timeoutId.current);
-
-      timeoutId.current = setTimeout(async () => {
-        const isUsernameUsable = await checkUsernameReq(userInfo.username);
-        setIsUsable(isUsernameUsable);
-      }, 1000);
-    };
-
-    autoCheckUsername();
-  }, [userInfo.username]);
-
   const favChangeHandler = (event) => {
     const target = event.target;
     const newFavValue = !fav[target.innerText];
@@ -209,13 +186,6 @@ const SignUp = () => {
 
     target.style.backgroundColor = newFavValue ? CLICKED : NOT_CLICKED;
     target.style.color = newFavValue ? 'white' : 'black';
-  };
-
-  const formChangeHandler = (event) => {
-    setUserInfo((prev) => ({
-      ...prev,
-      [event.target.name]: event.target.value,
-    }));
   };
 
   const formSubmitHandler = async (event) => {
@@ -238,102 +208,13 @@ const SignUp = () => {
       <InnerContainer>
         <Form onSubmit={formSubmitHandler}>
           {step === 1 && (
-            <>
-              <Title>프로필 설정하기</Title>
-              <SubTitle>시작하기 전 프로필 정보를 확인해 주세요.</SubTitle>
-              <InputGroup width='492px' marginBottom='40px'>
-                <Label color='#6a6a6a' fontSize='19px' fontWeight='500'>
-                  유저네임
-                </Label>
-                <InputBox
-                  type='text'
-                  name='username'
-                  width='353px'
-                  value={userInfo.username}
-                  onChange={(event) => {
-                    formChangeHandler(event);
-                  }}
-                  fontSize='19px'
-                  border={`1px solid ${setBorderColor(isUsable)}`}
-                  borderRadius='8px'
-                  height='50px'
-                  placeholder='wili_2023'
-                />
-              </InputGroup>
-              <InputGroup width='492px' marginBottom='100px'>
-                <Label color='#6a6a6a' fontSize='19px' fontWeight='500'>
-                  생년월일
-                </Label>
-                <InputBox
-                  type='date'
-                  name='birthday'
-                  width='353px'
-                  value={userInfo.birthday}
-                  placeholder='생년월일을 입력하세요.'
-                  onChange={formChangeHandler}
-                  fontSize='19px'
-                  border='1px solid #d9d9d9'
-                  borderRadius='8px'
-                  height='50px'
-                />
-              </InputGroup>
-              <ButtonContainer>
-                <Button
-                  type='button'
-                  onClick={nextStepHandler}
-                  width='115px'
-                  height='50px'
-                  borderRadius='60px'
-                  backgroundColor={NOT_CLICKED}
-                  float='right'
-                >
-                  다음 <RightIcon />
-                </Button>
-              </ButtonContainer>
-            </>
+            <Step1
+              setStep={setStep}
+              setUserInfo={setUserInfo}
+              userInfo={userInfo}
+            />
           )}
-          {step === 2 && (
-            <>
-              <Title>내 관심사를 선택해보세요!</Title>
-              <SubTitle>최대 5개까지 선택 가능합니다.</SubTitle>
-              <FavContainer>
-                {favorites.map((favorite) => {
-                  return (
-                    <FavSelect
-                      onClick={favChangeHandler}
-                      width='205px'
-                      height='51px'
-                    >
-                      {favorite}
-                    </FavSelect>
-                  );
-                })}
-              </FavContainer>
-              <ButtonContainer>
-                <Button
-                  type='submit'
-                  width='115px'
-                  height='50px'
-                  borderRadius='60px'
-                  backgroundColor={NOT_CLICKED}
-                  float='right'
-                >
-                  다음 <RightIcon />
-                </Button>
-                <Button
-                  type='button'
-                  onClick={() => setStep(1)}
-                  width='115px'
-                  height='50px'
-                  borderRadius='60px'
-                  backgroundColor='#fff'
-                  float='right'
-                >
-                  <LeftIcon /> 이전
-                </Button>
-              </ButtonContainer>
-            </>
-          )}
+          {step === 2 && <Step2 setStep={setStep} setFav={setFav} fav={fav} />}
         </Form>
       </InnerContainer>
     </Container>
