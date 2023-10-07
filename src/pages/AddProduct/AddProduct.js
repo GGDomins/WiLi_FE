@@ -27,6 +27,7 @@ import { addProductReq } from '../../utils/productAPIs/productAPIs';
 const Textarea = styled.textarea``;
 
 const AddProduct = () => {
+  const navigate = useNavigate();
   const photoInput = useRef();
   const [file, setFile] = useState(null);
   const [productInfo, setProductInfo] = useState({
@@ -45,8 +46,6 @@ const AddProduct = () => {
       [event.target.name]: event.target.value,
     });
   };
-
-  const navigate = useNavigate();
 
   const imageClickHandler = () => {
     photoInput.current.click();

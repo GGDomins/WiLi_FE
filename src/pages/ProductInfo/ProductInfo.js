@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 
 import { useNavigate } from 'react-router-dom';
 
@@ -62,29 +62,27 @@ const ProductInfo = ({ id, onClose }) => {
     link: '',
   });
 
+  const productInfoReqHandler = useCallback(async () => {
+    const response = await productInfoReq(id);
+
+    const info = JSON.parse(response.data.data.post);
+    const isMyPost = response.headers['ismypost'];
+
+    setProductInfo({
+      isMyPost: isMyPost,
+      image: 'data:image/png;base64,' + response.data.data.image,
+      brandName: info.brandName,
+      productName: info.productName,
+      category: info.category,
+      description: info.description,
+      productPrice: info.productPrice,
+      link: info.link,
+    });
+  });
+
   useEffect(() => {
-    console.log('requesting product info...');
-
-    const req = async () => {
-      const response = await productInfoReq(id);
-
-      const info = JSON.parse(response.data.data.post);
-      const isMyPost = response.headers['ismypost'];
-
-      setProductInfo({
-        isMyPost: isMyPost,
-        image: 'data:image/png;base64,' + response.data.data.image,
-        brandName: info.brandName,
-        productName: info.productName,
-        category: info.category,
-        description: info.description,
-        productPrice: info.productPrice,
-        link: info.link,
-      });
-    };
-
-    req();
-  }, []);
+    productInfoReqHandler();
+  }, [productInfoReqHandler]);
 
   return (
     <Container>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
@@ -67,42 +67,42 @@ const Profile = () => {
     birthday: '',
   });
 
+  const userProfileReqHandler = useCallback(async () => {
+    try {
+      const response = await axios.get(
+        `${process.env.REACT_APP_SERVER_URL}/users/${id}`,
+        {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem('accessToken')}`,
+            'Access-Control-Allow-Origin': '*',
+            'Content-Type': 'application/json',
+          },
+        }
+      );
+
+      console.log(response);
+
+      const info = response.data.data.member_Info;
+
+      info.favorites.split(',').forEach((fav) => {
+        setFav((prev) => ({ ...prev, [fav]: true }));
+      });
+
+      setUserInfo({
+        name: info.name,
+        email: info.email,
+        loginProvider: info.loginProvider,
+        username: info.username,
+        birthday: info.birthday,
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  });
+
   useEffect(() => {
-    const fetch = async () => {
-      try {
-        const response = await axios.get(
-          `${process.env.REACT_APP_SERVER_URL}/users/${id}`,
-          {
-            headers: {
-              Authorization: `Bearer ${localStorage.getItem('accessToken')}`,
-              'Access-Control-Allow-Origin': '*',
-              'Content-Type': 'application/json',
-            },
-          }
-        );
-
-        console.log(response);
-
-        const info = response.data.data.member_Info;
-
-        info.favorites.split(',').forEach((fav) => {
-          setFav((prev) => ({ ...prev, [fav]: true }));
-        });
-
-        setUserInfo({
-          name: info.name,
-          email: info.email,
-          loginProvider: info.loginProvider,
-          username: info.username,
-          birthday: info.birthday,
-        });
-      } catch (error) {
-        console.log(error);
-      }
-    };
-
-    fetch();
-  }, []);
+    userProfileReqHandler();
+  }, [userProfileReqHandler]);
 
   const logoutHandler = () => {
     const isLoggedOut = logoutReq();

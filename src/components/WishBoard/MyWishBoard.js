@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 
 import useAsync from '../../hooks/useAsync';
 
@@ -89,7 +89,7 @@ const MyWishBoard = () => {
   const [state, refetch] = useAsync(productReq, []);
   const { loading, response, error } = state;
 
-  useEffect(() => {
+  const productReqHandler = useCallback(() => {
     if (response) {
       const message = response.data.message;
 
@@ -122,6 +122,10 @@ const MyWishBoard = () => {
       setMyProducts(sortedProducts);
     }
   }, [response, sortType, selectedFav, selectedMonth]);
+
+  useEffect(() => {
+    productReqHandler();
+  }, [productReqHandler]);
 
   let content;
 

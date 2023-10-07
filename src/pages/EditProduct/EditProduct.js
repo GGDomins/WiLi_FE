@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 
 // components
@@ -44,27 +44,27 @@ const EditProduct = () => {
     link: '',
   });
 
-  useEffect(() => {
-    const req = async () => {
-      const response = await productInfoReq(id);
+  const productInfoReqHandler = useCallback(async () => {
+    const response = await productInfoReq(id);
 
-      const info = JSON.parse(response.data.data.post);
+    const info = JSON.parse(response.data.data.post);
 
-      setProductInfo({
-        image: 'data:image/png;base64,' + response.data.data.image,
-        brandName: info.brandName,
-        productName: info.productName,
-        category: info.category,
-        description: info.description,
-        productPrice: info.productPrice,
-        link: info.link,
-      });
+    setProductInfo({
+      image: 'data:image/png;base64,' + response.data.data.image,
+      brandName: info.brandName,
+      productName: info.productName,
+      category: info.category,
+      description: info.description,
+      productPrice: info.productPrice,
+      link: info.link,
+    });
 
-      console.log(productInfo);
-    };
-
-    req();
+    console.log(productInfo);
   }, []);
+
+  useEffect(() => {
+    productInfoReqHandler();
+  }, [productInfoReqHandler]);
 
   const formChangeHandler = (event) => {
     setProductInfo({

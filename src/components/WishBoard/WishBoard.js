@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 
 // components
 import ImageCard from '../UI/ImageCard/ImageCard';
@@ -14,17 +14,17 @@ const WishBoard = ({ productsData = [] }) => {
     selectedProductId: null,
   });
 
-  useEffect(() => {
-    const getCardSizes = async () => {
-      const sizes = {};
-      for (const product of productsData) {
-        sizes[product.id] = await cardSizePromise(product.img);
-      }
-      setCardSizes(sizes);
-    };
-
-    getCardSizes();
+  const getCardSizes = useCallback(async () => {
+    const sizes = {};
+    for (const product of productsData) {
+      sizes[product.id] = await cardSizePromise(product.img);
+    }
+    setCardSizes(sizes);
   }, [productsData]);
+
+  useEffect(() => {
+    getCardSizes();
+  }, [getCardSizes]);
 
   // image card size calculated by image ratio
   const cardSizePromise = (imageUrl) => {

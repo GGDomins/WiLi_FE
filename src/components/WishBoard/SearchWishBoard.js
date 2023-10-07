@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
 
 import useAsync from '../../hooks/useAsync';
@@ -17,7 +17,7 @@ const SearchWishBoard = () => {
   const [state, refetch] = useAsync(() => searchProductReq(query), []);
   const { loading, response, error } = state;
 
-  useEffect(() => {
+  const searchProductReqHandler = useCallback(() => {
     if (response) {
       const data = response.data.data;
       if (data.message === '유저 없음') {
@@ -54,6 +54,10 @@ const SearchWishBoard = () => {
       console.log(searchProducts);
     }
   }, [response, query]);
+
+  useEffect(() => {
+    searchProductReqHandler();
+  }, []);
 
   let content;
 

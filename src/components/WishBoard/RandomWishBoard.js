@@ -12,7 +12,7 @@ const RandomWishBoard = () => {
   const [state, refetch] = useAsync(randomProductReq, []);
   const { loading, response, error } = state;
 
-  useEffect(() => {
+  const randomProductReqHandler = useCallback(() => {
     if (response) {
       const data = response.data.data;
       if (data.message === 'no product found') {
@@ -46,6 +46,10 @@ const RandomWishBoard = () => {
       console.log(randomProducts);
     }
   }, [response]);
+
+  useEffect(() => {
+    randomProductReqHandler();
+  }, []);
 
   let content;
 
