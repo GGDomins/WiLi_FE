@@ -57,7 +57,7 @@ const SearchWishBoard = () => {
 
   useEffect(() => {
     searchProductReqHandler();
-  }, []);
+  }, [searchProductReqHandler]);
 
   let content;
 
