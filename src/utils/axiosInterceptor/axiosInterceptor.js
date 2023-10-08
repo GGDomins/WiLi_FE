@@ -9,6 +9,8 @@ axiosInstance.interceptors.request.use((req) => {
   const accessToken = localStorage.getItem('accessToken');
   if (accessToken) {
     req.headers.authorization = `Bearer ${accessToken}`;
+  } else {
+    req.headers.authorization = null;
   }
 
   if (req.data instanceof FormData) {
