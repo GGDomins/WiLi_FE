@@ -99,7 +99,7 @@ const MyWishBoard = () => {
       }
 
       const images = response.data.data.images;
-      const products = response.data.data.posts;
+      const products = response.data.data.items;
 
       let imageUrls = images.map((base64String) => {
         return 'data:image/png;base64,' + base64String;
