@@ -1,21 +1,28 @@
 import axios from 'axios';
+import axiosInstance from '../axiosInterceptor/axiosInterceptor';
 
 export const kakaoLoginReq = async (code) => {
-  axios.defaults.withCredentials = true;
-  const response = await axios.post(
-    `${process.env.REACT_APP_SERVER_URL}/kakao/callback?code=${code}`
-  );
+  // axios.defaults.withCredentials = true;
+  // const response = await axios.post(
+  //   `${process.env.REACT_APP_SERVER_URL}/kakao/callback?code=${code}`
+  // );
 
+  // return response;
+
+  const response = await axiosInstance.post(`/kakao/callback?code=${code}`);
   return response;
 };
 
 export const naverLoginReq = async (code, state) => {
-  axios.defaults.withCredentials = true;
-  console.log('useAsync');
-  const response = await axios.post(
-    `${process.env.REACT_APP_SERVER_URL}/naver/callback?code=${code}&state=${state}`
-  );
+  // axios.defaults.withCredentials = true;
+  // const response = await axios.post(
+  //   `${process.env.REACT_APP_SERVER_URL}/naver/callback?code=${code}&state=${state}`
+  // );
 
+  // return response;
+  const response = await axiosInstance.post(
+    `/naver/callback?code=${code}&state=${state}`
+  );
   return response;
 };
 
