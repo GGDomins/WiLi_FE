@@ -3,7 +3,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import useAsync from '../../hooks/useAsync';
 import { randomProductReq } from '../../utils/productAPIs/productAPIs';
 
-import WishBoard from './WishBoard';
+import WishBoard from '../../components/WishBoard/WishBoard';
 
 const RandomWishBoard = () => {
   const [randomProducts, setRandomProducts] = useState([]);

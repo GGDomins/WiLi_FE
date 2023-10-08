@@ -5,9 +5,9 @@ import useAsync from '../../hooks/useAsync';
 // apis
 import { productReq } from '../../utils/productAPIs/productAPIs';
 
-import WishBoard from './WishBoard';
-import Sort from '../Sort/Sort';
-import ToolBar from '../UI/ToolBar/ToolBar';
+import WishBoard from '../../components/WishBoard/WishBoard';
+import Sort from '../../components/Sort/Sort';
+import ToolBar from '../../components/UI/ToolBar/ToolBar';
 
 //import Loading from '../Loading/Loading';
 

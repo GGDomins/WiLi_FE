@@ -5,7 +5,7 @@ import useAsync from '../../hooks/useAsync';
 
 import { searchProductReq } from '../../utils/productAPIs/productAPIs';
 
-import WishBoard from './WishBoard';
+import WishBoard from '../../components/WishBoard/WishBoard';
 
 const SearchWishBoard = () => {
   const url = new URL(window.location.href);

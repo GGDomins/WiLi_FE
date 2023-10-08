@@ -34,7 +34,7 @@ import {
   FavContainer,
 } from './style';
 
-const SignUp = () => {
+const SignUpPage = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -221,4 +221,4 @@ const SignUp = () => {
   );
 };
 
-export default SignUp;
+export default SignUpPage;

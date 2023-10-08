@@ -6,9 +6,9 @@ import { productReq } from '../../utils/productAPIs/productAPIs';
 
 // components
 import Header from '../../components/Header/Header';
-import MyWishBoard from '../../components/WishBoard/MyWishBoard';
+import MyWishBoard from './MyWishBoard';
 
-const MyWishList = () => {
+const MyWishListPage = () => {
   const [isAuthed, setIsAuthed] = useAuth();
 
   return (
@@ -23,4 +23,4 @@ const MyWishList = () => {
   );
 };
 
-export default MyWishList;
+export default MyWishListPage;

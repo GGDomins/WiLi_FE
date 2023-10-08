@@ -13,7 +13,7 @@ import {
   Kakao,
 } from './style';
 
-const Login = () => {
+const LoginPage = () => {
   const kakaoLoginHandler = () => {
     window.location.href = KAKAO_LINK;
   };
@@ -37,4 +37,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default LoginPage;

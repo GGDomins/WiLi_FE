@@ -1,70 +1,44 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import React, { useState, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-// components
-import Header from '../../components/Header/Header';
+import styled from 'styled-components';
 
 // UI
+import Header from '../../components/Header/Header';
 import Label from '../../components/UI/InputLabel/InputLabel';
 import InputBox from '../../components/UI/InputBox/InputBox';
 import Button from '../../components/UI/Button/Button';
 import InputGroup from '../../components/UI/InputGroup/InputGroup';
-
-// style
 import {
-  EditProductContainer,
+  AddProductContainer,
   Title,
+  ImageField,
   ImagePreview,
   InputContainer,
   InputInnerContainer,
   ButtonContainer,
   TextArea,
   TextAreaGroup,
-  Category,
 } from './style';
 
 // APIs
-import {
-  editProductReq,
-  productInfoReq,
-} from '../../utils/productAPIs/productAPIs';
+import { addProductReq } from '../../utils/productAPIs/productAPIs';
 
-const EditProduct = () => {
+const Textarea = styled.textarea``;
+
+const AddProduct = () => {
   const navigate = useNavigate();
-
-  const { id } = useParams();
-
+  const photoInput = useRef();
+  const [file, setFile] = useState(null);
   const [productInfo, setProductInfo] = useState({
-    image: '',
     brandName: '',
     productName: '',
     category: '',
     description: '',
     productPrice: '',
     link: '',
+    date: new Date().toISOString().slice(0, 10),
   });
-
-  const productInfoReqHandler = useCallback(async () => {
-    const response = await productInfoReq(id);
-
-    const info = JSON.parse(response.data.data.post);
-
-    setProductInfo({
-      image: 'data:image/png;base64,' + response.data.data.image,
-      brandName: info.brandName,
-      productName: info.productName,
-      category: info.category,
-      description: info.description,
-      productPrice: info.productPrice,
-      link: info.link,
-    });
-
-    console.log(productInfo);
-  }, []);
-
-  useEffect(() => {
-    productInfoReqHandler();
-  }, [productInfoReqHandler]);
 
   const formChangeHandler = (event) => {
     setProductInfo({
@@ -73,28 +47,63 @@ const EditProduct = () => {
     });
   };
 
+  const imageClickHandler = () => {
+    photoInput.current.click();
+  };
+
+  const selectImageHandler = (event) => {
+    event.preventDefault();
+
+    setFile(event.target.files[0]);
+  };
+
   const formSubmitHandler = async (event) => {
     event.preventDefault();
 
-    editProductReq(productInfo, id);
+    for (let key in productInfo) {
+      if (productInfo[key] === '') {
+        alert('모든 항목을 입력해주세요.');
+        return;
+      }
+    }
+
+    const formData = new FormData();
+
+    formData.append('file', file);
+    formData.append('productInfo', JSON.stringify(productInfo));
+
+    addProductReq(formData);
   };
 
   return (
     <>
-      <Header />
-      <EditProductContainer>
-        <Title>제품 수정하기</Title>
+      <AddProductContainer>
+        <Title>제품 추가하기</Title>
         <form onSubmit={formSubmitHandler}>
           <InputContainer>
             <div>
-              {productInfo.image && <ImagePreview src={productInfo.image} />}
+              {!file && <ImageField onClick={imageClickHandler} />}
+              {file && (
+                <ImagePreview
+                  alt='preview'
+                  src={URL.createObjectURL(file)}
+                  onClick={imageClickHandler}
+                />
+              )}
+              <input
+                type='file'
+                accept='image/*'
+                name='product_img'
+                onChange={selectImageHandler}
+                ref={photoInput}
+                style={{ display: 'none' }}
+              />
             </div>
             <InputInnerContainer>
               <InputGroup width='493px'>
-                <Label>브랜드</Label>
+                <Label color='#6a6a6a'>브랜드</Label>
                 <InputBox
                   name='brandName'
-                  value={productInfo.brandName}
                   onChange={formChangeHandler}
                   type='text'
                   placeholder='나이키'
@@ -105,10 +114,9 @@ const EditProduct = () => {
                 />
               </InputGroup>
               <InputGroup width='493px'>
-                <Label>제품명</Label>
+                <Label color='#6a6a6a'>제품명</Label>
                 <InputBox
                   name='productName'
-                  value={productInfo.productName}
                   onChange={formChangeHandler}
                   type='text'
                   placeholder='에어포스 1 쉐도우'
@@ -119,13 +127,18 @@ const EditProduct = () => {
                 />
               </InputGroup>
               <InputGroup width='493px'>
-                <Label>카테고리</Label>
-                <Category
+                <Label color='#6a6a6a'>카테고리</Label>
+                <select
                   name='category'
-                  value={productInfo.category}
                   onChange={formChangeHandler}
+                  style={{
+                    width: '353px',
+                    height: '50px',
+                    border: '1px solid #D9D9D9',
+                    borderRadius: '7px',
+                  }}
                 >
-                  <option value=''></option>
+                  <option value=''>Select a category</option>
                   <option value='패션 / 의류'>패션 / 의류</option>
                   <option value='생활용품'>생활용품</option>
                   <option value='주방용품'>주방용품</option>
@@ -136,23 +149,21 @@ const EditProduct = () => {
                   <option value='반려동물품'>반려동물품</option>
                   <option value='스포츠 / 레저'>스포츠 / 레저</option>
                   <option value='기타'>기타</option>
-                </Category>
+                </select>
               </InputGroup>
               <TextAreaGroup>
                 <Label color='#6a6a6a'>메모</Label>
                 <TextArea
                   name='description'
-                  value={productInfo.description}
                   onChange={formChangeHandler}
                   type='text'
                   placeholder='제품에 대한 메모를 자유롭게 남겨주세요!'
                 />
               </TextAreaGroup>
               <InputGroup width='493px'>
-                <Label>가격</Label>
+                <Label color='#6a6a6a'>가격</Label>
                 <InputBox
                   name='productPrice'
-                  value={productInfo.productPrice}
                   onChange={formChangeHandler}
                   type='text'
                   placeholder='₩100000'
@@ -163,10 +174,9 @@ const EditProduct = () => {
                 />
               </InputGroup>
               <InputGroup width='493px'>
-                <Label>링크</Label>
+                <Label color='#6a6a6a'>링크</Label>
                 <InputBox
                   name='link'
-                  value={productInfo.link}
                   onChange={formChangeHandler}
                   type='text'
                   placeholder='www.nike.com'
@@ -202,9 +212,9 @@ const EditProduct = () => {
             </Button>
           </ButtonContainer>
         </form>
-      </EditProductContainer>
+      </AddProductContainer>
     </>
   );
 };
 
-export default EditProduct;
+export default AddProduct;

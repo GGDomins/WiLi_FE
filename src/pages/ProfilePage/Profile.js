@@ -18,7 +18,7 @@ import {
   InnerContainer,
   FavGroup,
 } from './style';
-import { ButtonContainer } from '../SignUp/style';
+import { ButtonContainer } from '../SignUpPage/style';
 import FavButton from '../../components/UI/FavButton/FavButton';
 import Header from '../../components/Header/Header';
 
@@ -180,7 +180,6 @@ const Profile = () => {
 
   return (
     <>
-      <Header />
       <ProfileContainer>
         <InnerContainer>
           <Title>My Profile</Title>

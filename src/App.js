@@ -4,16 +4,16 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import GlobalStyle from './styles/GlobalStyle';
 
 // pages
-import MyWishList from './pages/MyWishList/MyWishList';
-import Login from './pages/Login/Login';
-import SignUp from './pages/SignUp/SignUp';
-import Profile from './pages/Profile/Profile';
-import RandomFeed from './pages/RandomFeed/RandomFeed';
-import SearchQuery from './pages/Search/SearchQuery';
-import EditProduct from './pages/EditProduct/EditProduct';
-import AddProduct from './pages/AddProduct/AddProduct';
-import KakaoRedirection from './pages/Redirection/KakaoRedirection';
-import NaverRedirection from './pages/Redirection/NaverRedirection';
+import MyWishListPage from './pages/MyWishListPage/MyWishListPage';
+import LoginPage from './pages/LoginPage/LoginPage';
+import SignUpPage from './pages/SignUpPage/SignUpPage';
+import ProfilePage from './pages/ProfilePage/ProfilePage';
+import RandomFeedPage from './pages/RandomFeedPage/RandomFeedPage';
+import SearchPage from './pages/SearchPage/SearchPage';
+import EditProductPage from './pages/EditProductPage/EditProductPage';
+import AddProductPage from './pages/AddProductPage/AddProductPage';
+import KakaoRedirection from './pages/RedirectionPage/KakaoRedirection';
+import NaverRedirection from './pages/RedirectionPage/NaverRedirection';
 
 const App = () => {
   return (
@@ -21,14 +21,14 @@ const App = () => {
       <GlobalStyle />
       <Router>
         <Routes>
-          <Route path='/' element={<MyWishList />} />
-          <Route path='/login' element={<Login />} />
-          <Route path='/signup' element={<SignUp />} />
-          <Route path='/profile' element={<Profile />} />
-          <Route path='/add' element={<AddProduct />} />
-          <Route path='/edit/:id' element={<EditProduct />} />
-          <Route path='/random-feed' element={<RandomFeed />} />
-          <Route path='/search' element={<SearchQuery />} />
+          <Route path='/' element={<MyWishListPage />} />
+          <Route path='/login' element={<LoginPage />} />
+          <Route path='/signup' element={<SignUpPage />} />
+          <Route path='/profile' element={<ProfilePage />} />
+          <Route path='/add' element={<AddProductPage />} />
+          <Route path='/edit/:id' element={<EditProductPage />} />
+          <Route path='/random-feed' element={<RandomFeedPage />} />
+          <Route path='/search' element={<SearchPage />} />
           <Route exact path='/kakao/callback' element={<KakaoRedirection />} />
           <Route exact path='/naver/callback' element={<NaverRedirection />} />
         </Routes>
