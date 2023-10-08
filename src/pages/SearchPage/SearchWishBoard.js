@@ -29,7 +29,7 @@ const SearchWishBoard = () => {
       }
 
       const images = data.images;
-      const products = data.items;
+      const products = data.posts;
 
       console.log(images);
       console.log(products);
