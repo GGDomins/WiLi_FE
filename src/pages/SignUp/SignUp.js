@@ -161,7 +161,7 @@ const SignUp = () => {
   };
 
   useEffect(() => {
-    const data = location.state.data.data;
+    const data = location.state.data;
     console.log(data);
 
     setUserInfo({
