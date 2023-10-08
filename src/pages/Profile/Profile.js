@@ -98,7 +98,7 @@ const Profile = () => {
     } catch (error) {
       console.log(error);
     }
-  });
+  }, []);
 
   useEffect(() => {
     userProfileReqHandler();
