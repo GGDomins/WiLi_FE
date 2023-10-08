@@ -17,7 +17,7 @@ export const naverLoginReq = async (code, state) => {
 
 export const logoutReq = async () => {
   try {
-    const response = await axiosInterceptor.post(`/users/logout`);
+    const response = await axiosInstance.post(`/users/logout`);
     localStorage.removeItem('accessToken');
     console.log('logout successful');
 
