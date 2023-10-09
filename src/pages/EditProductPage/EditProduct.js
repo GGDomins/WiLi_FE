@@ -12,7 +12,7 @@ import InputGroup from '../../components/UI/InputGroup/InputGroup';
 
 // style
 import {
-  EditProductContainer,
+  ProductContainer,
   Title,
   ImagePreview,
   InputContainer,
@@ -21,7 +21,7 @@ import {
   TextArea,
   TextAreaGroup,
   Category,
-} from './style';
+} from '../AddProductPage/style';
 
 // APIs
 import {
@@ -81,7 +81,7 @@ const EditProduct = () => {
 
   return (
     <>
-      <EditProductContainer>
+      <ProductContainer>
         <Title>제품 수정하기</Title>
         <form onSubmit={formSubmitHandler}>
           <InputContainer>
@@ -201,7 +201,7 @@ const EditProduct = () => {
             </Button>
           </ButtonContainer>
         </form>
-      </EditProductContainer>
+      </ProductContainer>
     </>
   );
 };

@@ -10,7 +10,7 @@ import InputBox from '../../components/UI/InputBox/InputBox';
 import Button from '../../components/UI/Button/Button';
 import InputGroup from '../../components/UI/InputGroup/InputGroup';
 import {
-  AddProductContainer,
+  ProductContainer,
   Title,
   ImageField,
   ImagePreview,
@@ -77,7 +77,7 @@ const AddProduct = () => {
 
   return (
     <>
-      <AddProductContainer>
+      <ProductContainer>
         <Title>제품 추가하기</Title>
         <form onSubmit={formSubmitHandler}>
           <InputContainer>
@@ -212,7 +212,7 @@ const AddProduct = () => {
             </Button>
           </ButtonContainer>
         </form>
-      </AddProductContainer>
+      </ProductContainer>
     </>
   );
 };

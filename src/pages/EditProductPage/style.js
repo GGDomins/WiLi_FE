@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 
-//check
 export const EditProductContainer = styled.div`
   display: flex;
   flex-direction: column;

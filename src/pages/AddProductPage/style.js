@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import emptyImage from '../../assets/etc/addimage.png';
 
-export const AddProductContainer = styled.div`
+export const ProductContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -81,5 +81,16 @@ export const TextArea = styled.textarea`
 
   @media (max-width: 1800px) {
     width: 722px;
+  }
+`;
+
+export const Category = styled.select`
+  width: 383px;
+  height: 50px;
+  border: 1px solid #d9d9d9;
+  border-radius: 7px;
+
+  @media (max-width: 1800px) {
+    width: 353px;
   }
 `;
