@@ -49,6 +49,8 @@ export const signUpReq = async (userInfo) => {
   try {
     const response = await axiosInstance(`/users/signup`, userInfo);
 
+    console.log('success');
+
     const accessToken = response.headers['accesstoken'];
     localStorage.setItem('accessToken', accessToken);
 
