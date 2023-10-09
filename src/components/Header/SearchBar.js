@@ -30,7 +30,7 @@ const SearchBar = () => {
     <SearchContainer onSubmit={querySubmitHandler}>
       <SearchIcon src={search} alt='search' />
       <SearchInput
-        placeholder='검색어를 입력하세요 (나이키 에어포스 / @wili)'
+        placeholder='검색어를 입력하세요'
         onChange={queryChangeHandler}
       />
       <SearchButton type='submit'>검색하기</SearchButton>

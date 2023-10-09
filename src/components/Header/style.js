@@ -21,12 +21,12 @@ export const SearchContainer = styled.form`
 
   // for screens significantly smaller (like an iPad viewport)
   @media (max-width: 1024px) {
-    width: 500px; // 75% of 1024px
+    width: 400px; // 75% of 1024px
   }
 
   // for mobile screens
   @media (max-width: 768px) {
-    width: 400px; // 100% of 768px
+    width: 300px; // 100% of 768px
   }
 `;
 
@@ -70,6 +70,10 @@ export const HeaderContainer = styled.div`
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
   padding: 23px 50px;
+
+  @media (max-width: 1024px) {
+    padding: 23px 25px;
+  }
 `;
 
 export const ToggleContainer = styled.div`
@@ -96,6 +100,11 @@ export const ToggleButton = styled.button`
     width: 100px;
     height: 50px;
     font-size: 16px;
+  }
+
+  @media (max-width: 1024px) {
+    width: 75px;
+    height: 50px;
   }
 `;
 
