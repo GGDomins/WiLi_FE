@@ -7,6 +7,8 @@ export const ToolBarContainer = styled.div`
   padding: 20px 100px;
 
   @media (max-width: 768px) {
+    display: block;
+    justify-content: none;
     padding: 0px 25px;
   }
 `;
@@ -24,6 +26,10 @@ export const Title = styled.h1`
 export const ButtonContainer = styled.div`
   display: flex;
   align-items: center;
+
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
 `;
 
 export const Filter = styled.select`
@@ -37,5 +43,6 @@ export const Filter = styled.select`
 
   @media (max-width: 768px) {
     width: 150px;
+    height: 40px;
   }
 `;

@@ -11,6 +11,11 @@ const StyledIconButton = styled.button`
   background-color: ${(props) => props.backgroundColor || '#4c67db'};
   float: ${(props) => props.float || 'none'};
   cursor: pointer;
+
+  @media (max-width: 768px) {
+    width: 40px;
+    height: 40px;
+  }
 `;
 
 const SvgIcon = styled.img`
