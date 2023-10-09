@@ -88,10 +88,6 @@ export const SearchInput = styled.input`
 export const HeaderContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-areas:
-    'Logo'
-    'SearchBar'
-    'Toggle';
   align-items: center;
   padding: 23px 50px;
 
@@ -102,8 +98,7 @@ export const HeaderContainer = styled.div`
   @media (max-width: 768px) {
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas:
-      'Logo'
-      'Toggle'
+      'Logo Toggle'
       'SearchBar';
   }
 `;
