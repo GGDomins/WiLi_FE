@@ -66,9 +66,7 @@ export const SearchButton = styled.button`
   }
 
   @media (max-width: 768px) {
-    width: 75px;
-    height: 40px;
-    font-size: 14px;
+    display: none;
   }
 `;
 
@@ -152,7 +150,8 @@ export const ToggleButton = styled.button`
   }
 
   @media (max-width: 768px) {
-    display: none;
+    height: 40px;
+    font-size: 14px;
   }
 `;
 
