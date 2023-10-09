@@ -27,6 +27,7 @@ export const InnerContainer = styled.div`
 
 export const FavGroup = styled.div`
   display: flex;
+  width: 800px;
   margin: 0 0 60px 0;
 `;
 
@@ -43,7 +44,6 @@ export const FavContainer = styled.div`
   justify-content: space-between;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px 30px;
-  margin: 0 0 0 60px;
 
   @media (max-width: 1800px) {
     grid-template-columns: repeat(4, 1fr);
