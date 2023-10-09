@@ -253,8 +253,8 @@ const Profile = () => {
                       key={key}
                       onClick={favClickHandler}
                       isFav={fav[key]}
-                      width='205px'
-                      height='51px'
+                      width='130px'
+                      height='40px'
                     >
                       {key}
                     </FavButton>
