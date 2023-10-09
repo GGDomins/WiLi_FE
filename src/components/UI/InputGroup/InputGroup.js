@@ -8,7 +8,7 @@ const StyledInputGroup = styled.div`
   width: ${(props) => props.width || 'fit-content'};
 
   @media (max-width: 1800px) {
-    width: 462px;
+    width: 463px;
   }
 `;
 

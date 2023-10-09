@@ -28,8 +28,12 @@ export const InnerContainer = styled.div`
 export const FavGroup = styled.div`
   display: flex;
   justify-content: space-between;
-  width: 720px;
+  width: 750px;
   margin: 0 0 60px 0;
+
+  @media (max-width: 1800px) {
+    width: 720px;
+  }
 `;
 
 export const Title = styled.h1`
