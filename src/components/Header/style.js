@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const SearchContainer = styled.form`
+  grid-area: SearchBar;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -30,7 +31,12 @@ export const SearchContainer = styled.form`
   }
 `;
 
-export const Logo = styled.img`
+export const Logo = styled.div`
+  grid-area: Logo;
+  cursor: pointer;
+`;
+
+export const LogoImg = styled.img`
   width: 100px;
   height: auto;
 
@@ -82,15 +88,28 @@ export const SearchInput = styled.input`
 export const HeaderContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    'Logo'
+    'SearchBar'
+    'Toggle';
   align-items: center;
   padding: 23px 50px;
 
   @media (max-width: 1024px) {
     padding: 23px 25px;
   }
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      'Logo'
+      'Toggle'
+      'SearchBar';
+  }
 `;
 
 export const ToggleContainer = styled.div`
+  grid-area: Toggle;
   display: flex;
   align-items: center;
   justify-self: end;

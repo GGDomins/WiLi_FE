@@ -12,14 +12,13 @@ const Header = () => {
 
   return (
     <HeaderContainer>
-      <div
+      <Logo
         onClick={() => {
           navigate('/');
         }}
-        style={{ cursor: 'pointer' }}
       >
-        <Logo src={logo} alt='logo' />
-      </div>
+        <LogoImg src={logo} alt='logo' />
+      </Logo>
       <SearchBar />
       <Toggle />
     </HeaderContainer>
