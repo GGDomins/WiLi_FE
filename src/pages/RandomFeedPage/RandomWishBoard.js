@@ -14,11 +14,12 @@ const RandomWishBoard = () => {
 
   const randomProductReqHandler = useCallback(() => {
     if (response) {
-      const data = response.data.data;
-      if (data.message === 'no product found') {
+      if (response.data.message === 'no product found') {
         setErrorMessage('나의 관심사와 매칭되는 제품이 없습니다.');
         return;
       }
+
+      const data = response.data.data;
 
       const images = data.images;
       const products = data.items;
