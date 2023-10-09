@@ -29,7 +29,7 @@ export const SearchContainer = styled.form`
   @media (max-width: 768px) {
     width: 100%; // 100% of 768px
     height: 50px;
-    padding: 0 8px 0 15px;
+    padding: 6px 8px 6px 15px;
   }
 `;
 
@@ -67,7 +67,7 @@ export const SearchButton = styled.button`
 
   @media (max-width: 768px) {
     width: 75px;
-    height 40px;
+    height: 40px;
     font-size: 14px;
   }
 `;
@@ -93,7 +93,7 @@ export const SearchInput = styled.input`
   }
 
   @media (max-width: 768px) {
-    width: 250px;
+    width: 200px;
     margin: 0 0 0 7px;
   }
 `;
