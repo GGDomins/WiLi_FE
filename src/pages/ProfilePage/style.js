@@ -41,7 +41,7 @@ export const Title = styled.h1`
 export const FavContainer = styled.div`
   display: grid;
   justify-content: space-between;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px 30px;
   margin: 0 0 0 60px;
 
