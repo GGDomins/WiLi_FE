@@ -41,7 +41,7 @@ export const LogoImg = styled.img`
   height: auto;
 
   @media (max-width: 768px) {
-    width: 30px;
+    width: 70px;
     height: auto;
   }
 `;
@@ -139,7 +139,7 @@ export const ToggleButton = styled.button`
 
   @media (max-width: 768px) {
     height: 40px;
-    font-size: 16px;
+    font-size: 14px;
   }
 `;
 
