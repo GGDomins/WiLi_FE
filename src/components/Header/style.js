@@ -63,6 +63,10 @@ export const SearchInput = styled.input`
     font-size: 16px;
     margin: 0 0 0 15px;
   }
+
+  @media (max-width: 1024px) {
+    width: 400px;
+  }
 `;
 
 export const HeaderContainer = styled.div`
