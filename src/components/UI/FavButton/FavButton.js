@@ -7,7 +7,7 @@ const StyledFavSelect = styled.div`
   width: ${(props) => props.width || '100%'};
   height: ${(props) => props.height || '50px'};
   text-align: center;
-  font-size: 19px;
+  font-size: 16px;
   border-radius: 25px;
   background-color: ${(props) => (props.isFav ? '#4c67db' : '#4c67db4d')};
   color: ${(props) => (props.isFav ? '#fff' : '000')};
