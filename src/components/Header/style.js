@@ -115,6 +115,7 @@ export const HeaderContainer = styled.div`
     grid-template-areas:
       'Logo Toggle'
       'SearchBar SearchBar';
+    grid-gap: 10px 0;
   }
 `;
 
