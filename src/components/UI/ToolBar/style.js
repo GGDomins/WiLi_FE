@@ -5,6 +5,10 @@ export const ToolBarContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 20px 100px;
+
+  @media (max-width: 768px) {
+    padding: 0px 25px;
+  }
 `;
 
 export const Title = styled.h1`

@@ -93,7 +93,7 @@ export const SearchInput = styled.input`
   }
 
   @media (max-width: 768px) {
-    width: 200px;
+    width: 100%;
     margin: 0 0 0 7px;
   }
 `;
@@ -152,8 +152,7 @@ export const ToggleButton = styled.button`
   }
 
   @media (max-width: 768px) {
-    height: 40px;
-    font-size: 14px;
+    display: none;
   }
 `;
 
