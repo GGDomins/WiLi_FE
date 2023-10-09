@@ -30,6 +30,16 @@ export const SearchContainer = styled.form`
   }
 `;
 
+export const Logo = styled.img`
+  width: 100px;
+  height: auto;
+
+  @media (max-width: 768px) {
+    width: 30px;
+    height: auto;
+  }
+`;
+
 // can replace with ../UI/Button component
 export const SearchButton = styled.button`
   width: 179px;
