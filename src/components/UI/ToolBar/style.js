@@ -15,6 +15,10 @@ export const Title = styled.h1`
   font-size: 48px;
   color: #4c67db;
   font-weight: 500;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const ButtonContainer = styled.div`
@@ -30,4 +34,8 @@ export const Filter = styled.select`
   line-height: 50px;
   font-size: 16px;
   border-radius: 8px;
+
+  @media (max-width: 768px) {
+    width: 150px;
+  }
 `;

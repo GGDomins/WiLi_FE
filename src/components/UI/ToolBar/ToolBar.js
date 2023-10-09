@@ -16,7 +16,6 @@ const ToolBar = ({ onChooseSort }) => {
     <ToolBarContainer>
       <Title>My WishList</Title>
       <ButtonContainer>
-        <p>필터</p>
         <Filter onChange={filterChangeHandler}>
           <option value='' selected disabled hidden>
             필터 선택하기
