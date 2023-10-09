@@ -47,7 +47,7 @@ export const refreshReq = async () => {
 
 export const signUpReq = async (userInfo) => {
   try {
-    const response = await axiosInstance(`/users/signup`, userInfo);
+    const response = await axiosInstance.post(`/users/signup`, userInfo);
 
     console.log('success');
 
