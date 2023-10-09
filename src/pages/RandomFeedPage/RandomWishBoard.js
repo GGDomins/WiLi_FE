@@ -14,7 +14,7 @@ const RandomWishBoard = () => {
 
   const randomProductReqHandler = useCallback(() => {
     if (response) {
-      if (response.data.message === 'no product found') {
+      if (response.data.message === 'item fetch failed') {
         setErrorMessage('나의 관심사와 매칭되는 제품이 없습니다.');
         return;
       }

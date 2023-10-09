@@ -20,11 +20,11 @@ const SearchWishBoard = () => {
   const searchProductReqHandler = useCallback(() => {
     if (response) {
       const data = response.data.data;
-      if (data.message === '유저 없음') {
+      if (data.message === 'no user found') {
         setErrorMessage('존재하지 않는 유저입니다.');
         return;
       } else if (data.message === '제품 없음') {
-        setErrorMessage('존재하지 않는 제품입니다.');
+        setErrorMessage('no product found');
         return;
       }
 
