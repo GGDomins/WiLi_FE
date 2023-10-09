@@ -28,6 +28,8 @@ export const SearchContainer = styled.form`
   // for mobile screens
   @media (max-width: 768px) {
     width: 100%; // 100% of 768px
+    height: 50px;
+    padding: 0 8px 0 15px;
   }
 `;
 
@@ -62,6 +64,12 @@ export const SearchButton = styled.button`
     height: 50px;
     font-size: 16px;
   }
+
+  @media (max-width: 768px) {
+    width: 75px;
+    height 40px;
+    font-size: 14px;
+  }
 `;
 
 export const SearchInput = styled.input`
@@ -82,6 +90,11 @@ export const SearchInput = styled.input`
 
   @media (max-width: 1024px) {
     width: 400px;
+  }
+
+  @media (max-width: 768px) {
+    width: 250px;
+    margin: 0 0 0 7px;
   }
 `;
 
@@ -150,5 +163,10 @@ export const SearchIcon = styled.img`
   @media (max-width: 1800px) {
     width: 30px;
     height: 30px;
+  }
+
+  @media (max-width: 768px) {
+    width: 20px;
+    height: 20px;
   }
 `;
