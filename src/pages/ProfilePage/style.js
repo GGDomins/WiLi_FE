@@ -27,7 +27,8 @@ export const InnerContainer = styled.div`
 
 export const FavGroup = styled.div`
   display: flex;
-  width: 800px;
+  justify-content: space-between;
+  width: 720px;
   margin: 0 0 60px 0;
 `;
 
