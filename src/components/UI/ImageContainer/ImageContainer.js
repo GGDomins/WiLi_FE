@@ -12,6 +12,11 @@ const StyledContainer = styled.div`
   transform: translateX(-50%);
   justify-content: center;
   background-color: 'black';
+
+  @media (max-width: 768px) {
+    width: 380px;
+    grid-template-columns: repeat(2, 1fr);
+  }
 `;
 
 const ImageContainer = ({ children }) => {
