@@ -20,7 +20,7 @@ const KakaoRedirection = () => {
 
   if (loading) return <p>로그인 중입니다. 잠시만 기다려주세요.</p>;
   if (error) {
-    const data = error.response.data.data;
+    const data = error.response?.data;
     navigate('/signup', { state: { data: data } });
   }
   if (response) {
