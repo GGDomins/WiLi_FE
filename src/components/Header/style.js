@@ -27,7 +27,7 @@ export const SearchContainer = styled.form`
 
   // for mobile screens
   @media (max-width: 768px) {
-    width: 300px; // 100% of 768px
+    width: 100%; // 100% of 768px
   }
 `;
 
@@ -90,6 +90,7 @@ export const HeaderContainer = styled.div`
   grid-template-columns: repeat(3, 1fr);
   grid-template-areas: 'Logo SearchBar Toggle';
   align-items: center;
+  width: 100%;
   padding: 23px 50px;
 
   @media (max-width: 1024px) {
@@ -134,6 +135,11 @@ export const ToggleButton = styled.button`
   @media (max-width: 1024px) {
     width: 75px;
     height: 50px;
+  }
+
+  @media (max-width: 768px) {
+    height: 40px;
+    font-size: 16px;
   }
 `;
 
