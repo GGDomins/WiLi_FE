@@ -5,6 +5,7 @@ import { HeaderContainer } from './style';
 import logo from '../../assets/logo/Wili_logo.png';
 import SearchBar from './SearchBar';
 import Toggle from './Toggle';
+import { Logo } from './style';
 
 const Header = () => {
   const navigate = useNavigate();
@@ -17,7 +18,7 @@ const Header = () => {
         }}
         style={{ cursor: 'pointer' }}
       >
-        <img src={logo} alt='logo' width='100px' height='auto' />
+        <Logo src={logo} alt='logo' />
       </div>
       <SearchBar />
       <Toggle />
