@@ -21,7 +21,7 @@ export const SearchContainer = styled.form`
 
   // for screens significantly smaller (like an iPad viewport)
   @media (max-width: 1024px) {
-    width: 600px; // 75% of 1024px
+    width: 500px; // 75% of 1024px
   }
 
   // for mobile screens
