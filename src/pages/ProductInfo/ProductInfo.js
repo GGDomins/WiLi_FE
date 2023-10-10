@@ -85,48 +85,50 @@ const ProductInfo = ({ id, onClose }) => {
   }, [productInfoReqHandler]);
 
   return (
-    <Container>
+    <>
       <IconButton
         onClick={closeModalHandler}
         icon={close}
         float='right'
         backgroundColor='none'
       />
-      <Image src={productInfo.image} />
-      <InfoContainer>
-        <BrandName>{productInfo.brandName}</BrandName>
-        <ProductName>{productInfo.productName}</ProductName>
-        <Category>{productInfo.category}</Category>
-        <Description>{productInfo.description}</Description>
-        <ProductLink onClick={redirectHandler}>구매 링크로 가기</ProductLink>
-        <Price>{productInfo.productPrice}</Price>
-        {productInfo.isMyPost === 'true' && (
-          <ButtonContainer>
-            <Button
-              onClick={() => deleteProductHandler(id)}
-              width='200px'
-              height='40px'
-              border='1px solid #4C67DB'
-              borderRadius='21px'
-              float='right'
-            >
-              삭제하기
-            </Button>
-            <Button
-              onClick={() => editProductHandler(id)}
-              width='200px'
-              height='40px'
-              color='#ffffff'
-              backgroundColor='#4C67DB'
-              borderRadius='21px'
-              float='right'
-            >
-              수정하기
-            </Button>
-          </ButtonContainer>
-        )}
-      </InfoContainer>
-    </Container>
+      <Container>
+        <Image src={productInfo.image} />
+        <InfoContainer>
+          <BrandName>{productInfo.brandName}</BrandName>
+          <ProductName>{productInfo.productName}</ProductName>
+          <Category>{productInfo.category}</Category>
+          <Description>{productInfo.description}</Description>
+          <ProductLink onClick={redirectHandler}>구매 링크로 가기</ProductLink>
+          <Price>{productInfo.productPrice}</Price>
+          {productInfo.isMyPost === 'true' && (
+            <ButtonContainer>
+              <Button
+                onClick={() => deleteProductHandler(id)}
+                width='200px'
+                height='40px'
+                border='1px solid #4C67DB'
+                borderRadius='21px'
+                float='right'
+              >
+                삭제하기
+              </Button>
+              <Button
+                onClick={() => editProductHandler(id)}
+                width='200px'
+                height='40px'
+                color='#ffffff'
+                backgroundColor='#4C67DB'
+                borderRadius='21px'
+                float='right'
+              >
+                수정하기
+              </Button>
+            </ButtonContainer>
+          )}
+        </InfoContainer>
+      </Container>
+    </>
   );
 };
 
