@@ -8,6 +8,10 @@ export const ProductContainer = styled.div`
   justify-content: center;
   width: 1340px;
   margin: 0 auto;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 export const Title = styled.h1`
