@@ -69,4 +69,8 @@ export const InputContainer = styled.div`
   flex-direction: column;
   justify-content: space-between;
   width: 500px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
