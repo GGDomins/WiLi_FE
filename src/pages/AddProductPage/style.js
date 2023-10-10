@@ -77,6 +77,10 @@ export const TextAreaGroup = styled.div`
   @media (max-width: 1800px) {
     width: 832px;
   }
+
+  @media (max-width: 768px) {
+    width: 300px;
+  }
 `;
 
 export const TextArea = styled.textarea`
