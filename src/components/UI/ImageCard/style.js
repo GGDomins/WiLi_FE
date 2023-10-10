@@ -26,18 +26,18 @@ export const StyledCard = styled.div`
 
   grid-row-end: ${(props) =>
     props.size === 'small'
-      ? 'span 24'
-      : props.size === 'medium'
       ? 'span 30'
-      : 'span 36'};
+      : props.size === 'medium'
+      ? 'span 36'
+      : 'span 48'};
 
   @media (max-width: 768px) {
     grid-row-end: ${(props) =>
       props.size === 'small'
-        ? 'span 14'
-        : props.size === 'medium'
         ? 'span 20'
-        : 'span 26'};
+        : props.size === 'medium'
+        ? 'span 26'
+        : 'span 32'};
   }
 
   &:hover ${Brand} {
