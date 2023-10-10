@@ -17,8 +17,9 @@ import {
   InputContainer,
   InnerContainer,
   FavGroup,
+  ButtonContainer,
 } from './style';
-import { ButtonContainer } from '../SignUpPage/style';
+
 import FavButton from '../../components/UI/FavButton/FavButton';
 import Header from '../../components/Header/Header';
 

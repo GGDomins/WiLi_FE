@@ -22,6 +22,11 @@ export const InnerContainer = styled.div`
   @media (max-width: 1800px) {
     height: 700px;
   }
+
+  @media (max-width: 768px) {
+    height: 0;
+    box-shadow: none;
+  }
 `;
 
 export const FavGroup = styled.div`
@@ -61,6 +66,7 @@ export const FavContainer = styled.div`
 
   @media (max-width: 768px) {
     grid-template-columns: repeat(2, 1fr);
+    align-self: center;
   }
 `;
 
@@ -72,5 +78,17 @@ export const InputContainer = styled.div`
 
   @media (max-width: 768px) {
     width: 100%;
+  }
+`;
+
+export const ButtonContainer = styled.div`
+  display: block;
+  width: 100%;
+  padding: 0px 54px;
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 `;
