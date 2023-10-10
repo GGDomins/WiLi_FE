@@ -21,7 +21,7 @@ export const StyledCard = styled.div`
   overflow: hidden;
 
   border-radius: 30px;
-  margin: 15px 15px;
+  margin: 15px;
   padding: 20px;
 
   grid-row-end: ${(props) =>
@@ -32,6 +32,7 @@ export const StyledCard = styled.div`
       : 'span 48'};
 
   @media (max-width: 768px) {
+    margin: 8px;
     grid-row-end: ${(props) =>
       props.size === 'small'
         ? 'span 20'
