@@ -10,6 +10,12 @@ const StyledInputGroup = styled.div`
   @media (max-width: 1800px) {
     width: 463px;
   }
+
+  @media (max-width: 768px) {
+    width: 300px;
+    flex-direction: column;
+    justify-content: center;
+  }
 `;
 
 const InputGroup = ({ children, width, marginBottom }) => {

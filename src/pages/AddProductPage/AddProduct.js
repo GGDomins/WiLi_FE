@@ -8,6 +8,7 @@ import Header from '../../components/Header/Header';
 import Label from '../../components/UI/InputLabel/InputLabel';
 import InputBox from '../../components/UI/InputBox/InputBox';
 import Button from '../../components/UI/Button/Button';
+import InputGroup from '../../components/UI/InputGroup/InputGroup';
 import {
   ProductContainer,
   Title,
@@ -18,7 +19,6 @@ import {
   ButtonContainer,
   TextArea,
   TextAreaGroup,
-  InputGroup2,
 } from './style';
 
 // APIs
@@ -100,7 +100,7 @@ const AddProduct = () => {
               />
             </div>
             <InputInnerContainer>
-              <InputGroup2 width='493px'>
+              <InputGroup width='493px'>
                 <Label color='#6a6a6a'>브랜드</Label>
                 <InputBox
                   name='brandName'
@@ -112,8 +112,8 @@ const AddProduct = () => {
                   border='1px solid #D9D9D9'
                   borderRadius='7px'
                 />
-              </InputGroup2>
-              <InputGroup2 width='493px'>
+              </InputGroup>
+              <InputGroup width='493px'>
                 <Label color='#6a6a6a'>제품명</Label>
                 <InputBox
                   name='productName'
@@ -125,8 +125,8 @@ const AddProduct = () => {
                   border='1px solid #D9D9D9'
                   borderRadius='7px'
                 />
-              </InputGroup2>
-              <InputGroup2 width='493px'>
+              </InputGroup>
+              <InputGroup width='493px'>
                 <Label color='#6a6a6a'>카테고리</Label>
                 <select
                   name='category'
@@ -150,7 +150,7 @@ const AddProduct = () => {
                   <option value='스포츠 / 레저'>스포츠 / 레저</option>
                   <option value='기타'>기타</option>
                 </select>
-              </InputGroup2>
+              </InputGroup>
               <TextAreaGroup>
                 <Label color='#6a6a6a'>메모</Label>
                 <TextArea
@@ -160,7 +160,7 @@ const AddProduct = () => {
                   placeholder='제품에 대한 메모를 자유롭게 남겨주세요!'
                 />
               </TextAreaGroup>
-              <InputGroup2 width='493px'>
+              <InputGroup width='493px'>
                 <Label color='#6a6a6a'>가격</Label>
                 <InputBox
                   name='productPrice'
@@ -172,8 +172,8 @@ const AddProduct = () => {
                   border='1px solid #D9D9D9'
                   borderRadius='7px'
                 />
-              </InputGroup2>
-              <InputGroup2 width='493px'>
+              </InputGroup>
+              <InputGroup width='493px'>
                 <Label color='#6a6a6a'>링크</Label>
                 <InputBox
                   name='link'
@@ -185,7 +185,7 @@ const AddProduct = () => {
                   border='1px solid #D9D9D9'
                   borderRadius='7px'
                 />
-              </InputGroup2>
+              </InputGroup>
             </InputInnerContainer>
           </InputContainer>
           <ButtonContainer>
