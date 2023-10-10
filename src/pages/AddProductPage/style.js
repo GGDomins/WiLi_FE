@@ -91,6 +91,10 @@ export const TextArea = styled.textarea`
   @media (max-width: 1800px) {
     width: 722px;
   }
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 export const Category = styled.select`
