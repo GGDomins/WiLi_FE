@@ -19,6 +19,10 @@ const StyledButton = styled.button`
     background-color: #4c67db;
     color: #ffffff;
   }
+
+  @media (max-width: 768px) {
+    width: 150px;
+  }
 `;
 
 const Button = ({
