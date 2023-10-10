@@ -8,7 +8,7 @@ const Container = styled.div`
 
   @media (max-width: 768px) {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 `;
 
@@ -23,6 +23,12 @@ const Item = styled.div`
   background-color: #b0bfff;
   color: #6a6a6a;
   cursor: pointer;
+
+  @media (max-width: 768px) {
+    width: 60px;
+    height: 30px;
+    font-size: 16px;
+  }
 `;
 
 const Sort = ({ items, selectedItems, onItemClick, width }) => {
