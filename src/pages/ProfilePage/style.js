@@ -4,7 +4,6 @@ export const ProfileContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: calc(100vh - 110px);
 `;
 
 export const InnerContainer = styled.div`
@@ -52,6 +51,10 @@ export const FavContainer = styled.div`
 
   @media (max-width: 1800px) {
     grid-template-columns: repeat(4, 1fr);
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
   }
 `;
 
