@@ -28,6 +28,8 @@ const Item = styled.div`
     width: 60px;
     height: 30px;
     font-size: 16px;
+    line-height: 30px;
+    justify-self: center;
   }
 `;
 
