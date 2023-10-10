@@ -35,6 +35,11 @@ export const ImageField = styled.div`
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
+
+  @media (max-width: 768px) {
+    width: 350px;
+    height: 350px;
+  }
 `;
 
 export const ImagePreview = styled.img`
