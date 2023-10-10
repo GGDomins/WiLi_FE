@@ -24,6 +24,11 @@ const StyledFavSelect = styled.div`
     width: 130px;
     height: 40px;
   }
+
+  @media (max-width: 768px) {
+    width: 50px;
+    height: 35px;
+  }
 `;
 
 const FavButton = ({ children, onClick, isFav, width, height }) => {

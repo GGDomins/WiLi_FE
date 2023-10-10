@@ -4,7 +4,12 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   gap: 15px;
-  margin: 0 0 20px 0;
+  margin: 20px 0 20px 0;
+
+  @media (max-width: 768px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
 `;
 
 const Item = styled.div`
