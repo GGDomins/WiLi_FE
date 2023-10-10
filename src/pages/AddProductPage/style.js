@@ -18,6 +18,11 @@ export const Title = styled.h1`
   font-size: 29px;
   color: #4c67db;
   margin: 0 0 43px 0;
+
+  @media (max-width: 768px) {
+    font-size: 24px;
+    margin: 0 0 24px 0;
+  }
 `;
 
 export const ImageField = styled.div`
@@ -39,6 +44,11 @@ export const ImagePreview = styled.img`
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
   object-fit: contain;
   cursor: pointer;
+
+  @media (max-width: 768px) {
+    width: 350px;
+    height: 350px;
+  }
 `;
 
 export const InputContainer = styled.div`
