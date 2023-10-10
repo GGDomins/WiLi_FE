@@ -60,6 +60,10 @@ export const InputContainer = styled.div`
 
 export const InputInnerContainer = styled.div`
   margin: 0 0 0 70px;
+
+  @media (max-width: 768px) {
+    margin: 10px;
+  }
 `;
 
 export const ButtonContainer = styled.div`
