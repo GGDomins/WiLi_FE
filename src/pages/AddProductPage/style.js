@@ -84,7 +84,10 @@ export const TextAreaGroup = styled.div`
   }
 
   @media (max-width: 768px) {
-    width: 300px;
+    width: 353px;
+    align-items: unset;
+    flex-direction: column;
+    justify-content: center;
   }
 `;
 
