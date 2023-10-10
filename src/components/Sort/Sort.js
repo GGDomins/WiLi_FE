@@ -9,6 +9,7 @@ const Container = styled.div`
   @media (max-width: 768px) {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    padding: 0px 40px;
   }
 `;
 
