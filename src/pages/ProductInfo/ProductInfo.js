@@ -78,7 +78,7 @@ const ProductInfo = ({ id, onClose }) => {
       productPrice: info.productPrice,
       link: info.link,
     });
-  });
+  }, []);
 
   useEffect(() => {
     productInfoReqHandler();
