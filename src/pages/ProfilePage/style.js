@@ -33,6 +33,12 @@ export const FavGroup = styled.div`
   @media (max-width: 1800px) {
     width: 720px;
   }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    justify-content: unset;
+    width: 350px;
+  }
 `;
 
 export const Title = styled.h1`
