@@ -72,6 +72,7 @@ export const InputContainer = styled.div`
     width: 100%;
     flex-direction: column;
     justify-content: center;
+    margin: 0 0 10px 0;
   }
 `;
 
@@ -86,6 +87,10 @@ export const InputInnerContainer = styled.div`
 export const ButtonContainer = styled.div`
   display: block;
   width: 100%;
+
+  @media (max-width: 768px) {
+    margin: 10px 0 40px 0;
+  }
 `;
 
 export const TextAreaGroup = styled.div`
