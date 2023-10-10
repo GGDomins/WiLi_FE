@@ -24,7 +24,7 @@ export const InnerContainer = styled.div`
   }
 
   @media (max-width: 768px) {
-    height: 0;
+    height: unset;
     box-shadow: none;
   }
 `;
