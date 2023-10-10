@@ -31,6 +31,15 @@ export const StyledCard = styled.div`
       ? 'span 30'
       : 'span 36'};
 
+  @media (max-width: 768px) {
+    grid-row-end: ${(props) =>
+      props.size === 'small'
+        ? 'span 14'
+        : props.size === 'medium'
+        ? 'span 20'
+        : 'span 26'};
+  }
+
   &:hover ${Brand} {
     display: block;
   }
