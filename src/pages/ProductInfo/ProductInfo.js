@@ -86,14 +86,12 @@ const ProductInfo = ({ id, onClose }) => {
 
   return (
     <Container>
-      <ButtonContainer>
-        <IconButton
-          onClick={closeModalHandler}
-          icon={close}
-          float='right'
-          backgroundColor='none'
-        />
-      </ButtonContainer>
+      <IconButton
+        onClick={closeModalHandler}
+        icon={close}
+        float='right'
+        backgroundColor='none'
+      />
       <Image src={productInfo.image} />
       <InfoContainer>
         <BrandName>{productInfo.brandName}</BrandName>
