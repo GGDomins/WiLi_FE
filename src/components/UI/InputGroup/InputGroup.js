@@ -12,7 +12,8 @@ const StyledInputGroup = styled.div`
   }
 
   @media (max-width: 768px) {
-    width: 300px;
+    width: 353px;
+    align-items: left;
     flex-direction: column;
     justify-content: center;
   }

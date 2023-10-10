@@ -10,6 +10,7 @@ export const ProductContainer = styled.div`
 
   @media (max-width: 768px) {
     width: 100%;
+    padding: 0px 25px;
   }
 `;
 
