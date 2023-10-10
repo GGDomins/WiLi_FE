@@ -39,6 +39,7 @@ export const ImageField = styled.div`
   @media (max-width: 768px) {
     width: 350px;
     height: 350px;
+    margin: 0 0 24px 0;
   }
 `;
 
