@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import emptyImage from '../../assets/etc/addimage.png';
+import InputGroup from '../../components/UI/InputGroup/InputGroup';
 
 export const ProductContainer = styled.div`
   display: flex;
@@ -46,6 +47,11 @@ export const InputContainer = styled.div`
   @media (max-width: 1800px) {
     margin: 0 0 50px 0;
   }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    justify-content: center;
+  }
 `;
 
 export const InputInnerContainer = styled.div`
@@ -91,5 +97,13 @@ export const Category = styled.select`
 
   @media (max-width: 1800px) {
     width: 353px;
+  }
+`;
+
+export const InputGroup2 = styled(InputGroup)`
+  @media (max-width: 768px) {
+    width: 300px;
+    flex-direction: column;
+    justify-content: center;
   }
 `;
