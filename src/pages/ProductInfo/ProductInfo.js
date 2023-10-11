@@ -6,6 +6,7 @@ import axios from 'axios';
 
 import {
   Container,
+  CloseContainer,
   Image,
   InfoContainer,
   BrandName,
@@ -86,12 +87,14 @@ const ProductInfo = ({ id, onClose }) => {
 
   return (
     <>
-      <IconButton
-        onClick={closeModalHandler}
-        icon={close}
-        float='right'
-        backgroundColor='none'
-      />
+      <CloseContainer>
+        <IconButton
+          onClick={closeModalHandler}
+          icon={close}
+          float='right'
+          backgroundColor='none'
+        />
+      </CloseContainer>
       <Container>
         <Image src={productInfo.image} />
         <InfoContainer>

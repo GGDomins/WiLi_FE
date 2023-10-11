@@ -92,3 +92,9 @@ export const ButtonContainer = styled.div`
     align-items: center;
   }
 `;
+
+export const CloseContainer = styled.div`
+  display: block;
+  align-items: right;
+  width: 100%;
+`;
