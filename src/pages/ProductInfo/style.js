@@ -14,6 +14,12 @@ export const Image = styled.img`
   margin: 0 55px 0 0;
 `;
 
+export const CloseContainer = styled.div`
+  display: block;
+  align-items: right;
+  width: 100%;
+`;
+
 export const InfoContainer = styled.div`
   display: flex;
   flex-direction: column;
