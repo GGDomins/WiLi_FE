@@ -91,7 +91,7 @@ const ProductInfo = ({ id, onClose }) => {
         <IconButton
           onClick={closeModalHandler}
           icon={close}
-          backgroundColor='none'
+          backgroundColor='#fff'
         />
       </CloseContainer>
       <Container>

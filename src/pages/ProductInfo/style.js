@@ -28,6 +28,7 @@ export const CloseContainer = styled.div`
   display: block;
   text-align: right;
   width: 100%;
+  margin: 0 0 20px 0;
 `;
 
 export const InfoContainer = styled.div`
