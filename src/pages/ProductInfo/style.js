@@ -49,7 +49,7 @@ export const BrandName = styled.h1`
   font-size: 24px;
 
   @media (max-width: 768px) {
-    margin: 0 0 15px 0;
+    margin: 0 0 10px 0;
     font-size: 16px;
   }
 `;
@@ -60,7 +60,7 @@ export const ProductName = styled.h2`
   font-size: 29px;
 
   @media (max-width: 768px) {
-    margin: 0 0 15px 0;
+    margin: 0 0 10px 0;
     font-size: 24px;
   }
 `;
@@ -72,7 +72,7 @@ export const Description = styled.p`
   width: 100%;
 
   @media (max-width: 768px) {
-    margin: 0 0 15px 0;
+    margin: 0 0 10px 0;
     font-size: 16px;
   }
 `;
@@ -92,6 +92,7 @@ export const Category = styled.div`
   @media (max-width: 768px) {
     width: 150px;
     height: 30px;
+    line-height: 30px;
     font-size: 16px;
     margin: 0 0 15px 0;
   }
@@ -116,7 +117,7 @@ export const ButtonContainer = styled.div`
 export const ProductLink = styled.div`
   display: block;
   font-size: 19px;
-  width: 232px;
+  width: 231px;
   height: 51px;
   line-height: 51px;
   text-align: center;
@@ -127,5 +128,7 @@ export const ProductLink = styled.div`
 
   @media (max-width: 768px) {
     margin: 0 0 15px 0;
+    width: 170px;
+    height: 30px;
   }
 `;
