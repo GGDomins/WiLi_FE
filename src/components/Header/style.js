@@ -20,6 +20,10 @@ export const SearchContainer = styled.form`
     padding: 0 8px 0 25px;
   }
 
+  @media (max-width: 1440px) {
+    width: 600px;
+  }
+
   // for screens significantly smaller (like an iPad viewport)
   @media (max-width: 1024px) {
     width: 400px; // 75% of 1024px
