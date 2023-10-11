@@ -18,8 +18,8 @@ export const Image = styled.img`
   margin: 0 55px 0 0;
 
   @media (max-width: 768px) {
-    width: 350px;
-    height: 350px;
+    width: 250px;
+    height: 250px;
     margin: 0 0 15px 0;
   }
 `;
@@ -46,20 +46,22 @@ export const InfoContainer = styled.div`
 export const BrandName = styled.h1`
   display: block;
   color: #6a6a6a;
-  font-size: 29px;
+  font-size: 24px;
 
   @media (max-width: 768px) {
     margin: 0 0 15px 0;
+    font-size: 16px;
   }
 `;
 
 export const ProductName = styled.h2`
   display: block;
   color: #6a6a6a;
-  font-size: 24px;
+  font-size: 29px;
 
   @media (max-width: 768px) {
     margin: 0 0 15px 0;
+    font-size: 24px;
   }
 `;
 
@@ -71,6 +73,7 @@ export const Description = styled.p`
 
   @media (max-width: 768px) {
     margin: 0 0 15px 0;
+    font-size: 16px;
   }
 `;
 
@@ -87,6 +90,9 @@ export const Category = styled.div`
   background: #fff;
 
   @media (max-width: 768px) {
+    width: 150px;
+    height: 30px;
+    font-size: 16px;
     margin: 0 0 15px 0;
   }
 `;
@@ -98,6 +104,7 @@ export const Price = styled.p`
 
   @media (max-width: 768px) {
     margin: 0 0 15px 0;
+    font-size: 20px;
   }
 `;
 
