@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom';
 
 import styled from 'styled-components';
 
+import imageCompression from 'browser-image-compression';
+
 // UI
 import Header from '../../components/Header/Header';
 import Label from '../../components/UI/InputLabel/InputLabel';
@@ -51,10 +53,21 @@ const AddProduct = () => {
     photoInput.current.click();
   };
 
-  const selectImageHandler = (event) => {
+  const selectImageHandler = async (event) => {
     event.preventDefault();
 
-    setFile(event.target.files[0]);
+    const imageFile = event.target.files[0];
+    const options = {
+      maxSize: 2,
+      useWebWorker: true,
+    };
+
+    try {
+      const compressedFile = await imageCompression(imageFile, options);
+      setFile(compressedFile);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const formSubmitHandler = async (event) => {
