@@ -1,5 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
+import { Helmet } from 'react-helmet';
+
 // global style
 import GlobalStyle from './styles/GlobalStyle';
 
@@ -18,6 +20,9 @@ import NaverRedirection from './pages/RedirectionPage/NaverRedirection';
 const App = () => {
   return (
     <>
+      <Helmet>
+        <title>WiLi</title>
+      </Helmet>
       <GlobalStyle />
       <Router>
         <Routes>
