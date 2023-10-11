@@ -89,6 +89,8 @@ export const ButtonContainer = styled.div`
   width: 100%;
 
   @media (max-width: 768px) {
+    display: flex;
+
     margin: 10px 0 40px 0;
   }
 `;

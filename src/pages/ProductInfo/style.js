@@ -3,6 +3,10 @@ import styled from 'styled-components';
 export const Container = styled.div`
   display: flex;
   justify-content: center;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 export const Image = styled.img`
@@ -12,6 +16,12 @@ export const Image = styled.img`
   border-radius: 40px;
   background-color: #d9d9d9;
   margin: 0 55px 0 0;
+
+  @media (max-width: 768px) {
+    width: 350px;
+    height: 350px;
+    margin: 0 0 15px 0;
+  }
 `;
 
 export const CloseContainer = styled.div`
