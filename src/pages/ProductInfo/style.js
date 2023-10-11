@@ -130,5 +130,6 @@ export const ProductLink = styled.div`
     margin: 0 0 15px 0;
     width: 170px;
     height: 30px;
+    line-height: 30px;
   }
 `;
