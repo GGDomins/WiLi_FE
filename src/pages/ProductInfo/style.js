@@ -16,7 +16,7 @@ export const Image = styled.img`
 
 export const CloseContainer = styled.div`
   display: block;
-  align-items: right;
+  text-align: right;
   width: 100%;
 `;
 
