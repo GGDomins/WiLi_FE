@@ -16,6 +16,7 @@ Unlike any other similar websites, WiLi simply presents images from the user's a
 - React
 - axios
 - styled-components
+  
 React's component based architecture provided better code organisation and quicker rendering by creating and using reusable components across many different pages. Additionally, WiLi required various user interaction events which caused lots of changes to the DOM. Since React uses virtual DOM to update the changes to the actual DOM, it improves performance by minimizing the cost of manipulating the DOM.
 
 Axios was used to send and process requests and responses with the server side. Axios provides simplicity, convenience and consistency for making HTTP requests and parsing JSON responses. Also implementing an axios interceptor reduced the use of duplicating code for setting up headers for the request, which increased the speed and improved efficiency of sending the request.
