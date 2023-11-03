@@ -21,6 +21,7 @@ import SignUpPage from './pages/SignUpPage/SignUpPage';
 
 import enTranslation from './locales/en.json';
 import krTranslation from './locales/kr.json';
+import LoginPage from './pages/LoginPage/LoginPage';
 
 i18n.use(initReactI18next).init({
   resources: {
@@ -42,6 +43,7 @@ const App = () => {
         <Routes>
           <Route path='/' element={<MyWishListPage />} />
           <Route path='/welcome' element={<LandingPage />} />
+          <Route path='/login' element={<LoginPage />} />
           <Route path='/signup' element={<SignUpPage />} />
           <Route path='/normal-signup' element={<NormalSignUpPage />} />
           <Route path='/profile' element={<ProfilePage />} />
