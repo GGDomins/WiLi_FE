@@ -96,11 +96,11 @@ export const ButtonContainer = styled.div`
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   border-radius: 26px;
   width: 612px;
-  height: 307px;
+  height: 350px;
 
   @media ${device.wideLaptop} {
     width: 500px;
-    height: 250px;
+    height: 350px;
   }
 
   @media ${device.tablet} {
@@ -161,6 +161,7 @@ export const Naver = styled.div`
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 9px;
+  margin: 0 0 20px 0;
   width: 100%;
   height: 69px;
   cursor: pointer;
