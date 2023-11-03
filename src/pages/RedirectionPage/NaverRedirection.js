@@ -22,7 +22,7 @@ const NaverRedirection = () => {
   if (loading) return <p>로그인 중입니다. 잠시만 기다려주세요.</p>;
   if (error) {
     const data = error.response?.data;
-    navigate('/signup', { state: { data: data } });
+    navigate('/additional-signup', { state: { data: data } });
   }
   if (response) {
     const accessToken = response.headers['accesstoken'];

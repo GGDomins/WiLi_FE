@@ -149,38 +149,71 @@ const Step1 = ({ setStep, setUserInfo, userInfo }) => {
     <>
       <Title>프로필 설정하기</Title>
       <SubTitle>시작하기 전 프로필 정보를 확인해 주세요.</SubTitle>
-      <InputGroup width='492px' marginBottom='40px'>
-        <Label color='#6a6a6a' fontSize='19px' fontWeight='500'>
-          이름
-        </Label>
-        <InputBox
-          type='text'
-          name='username'
-          width='353px'
-          value={userInfo.name}
-          onChange={formChangeHandler}
-          fontSize='19px'
-          border={`1px solid ${setBorderColor(isUsable)}`}
-          borderRadius='8px'
-          height='50px'
-          placeholder='wili_2023'
-        />
-      </InputGroup>
-      <InputGroup width='492px' marginBottom='40px'>
+      <InputGroup width='492px' marginBottom='100px'>
         <Label color='#6a6a6a' fontSize='19px' fontWeight='500'>
           이메일
         </Label>
         <InputBox
           type='text'
-          name='username'
+          name='email'
           width='353px'
           value={userInfo.email}
+          placeholder='생년월일을 입력하세요.'
           onChange={formChangeHandler}
           fontSize='19px'
-          border={`1px solid ${setBorderColor(isUsable)}`}
+          border='1px solid #d9d9d9'
           borderRadius='8px'
           height='50px'
-          placeholder='wili_2023'
+        />
+      </InputGroup>
+      <InputGroup width='492px' marginBottom='100px'>
+        <Label color='#6a6a6a' fontSize='19px' fontWeight='500'>
+          비밀번호
+        </Label>
+        <InputBox
+          type='password'
+          name='password'
+          width='353px'
+          value={userInfo.password}
+          placeholder='비밀번호를 입력하세요.'
+          onChange={formChangeHandler}
+          fontSize='19px'
+          border='1px solid #d9d9d9'
+          borderRadius='8px'
+          height='50px'
+        />
+      </InputGroup>
+      <InputGroup width='492px' marginBottom='100px'>
+        <Label color='#6a6a6a' fontSize='19px' fontWeight='500'>
+          비밀번호 확인
+        </Label>
+        <InputBox
+          type='password'
+          name='passwordCheck'
+          width='353px'
+          placeholder='비밀번호 확인'
+          onChange={formChangeHandler}
+          fontSize='19px'
+          border='1px solid #d9d9d9'
+          borderRadius='8px'
+          height='50px'
+        />
+      </InputGroup>
+      <InputGroup width='492px' marginBottom='100px'>
+        <Label color='#6a6a6a' fontSize='19px' fontWeight='500'>
+          이름
+        </Label>
+        <InputBox
+          type='text'
+          name='name'
+          width='353px'
+          value={userInfo.name}
+          placeholder='이름을 입력하세요'
+          onChange={formChangeHandler}
+          fontSize='19px'
+          border='1px solid #d9d9d9'
+          borderRadius='8px'
+          height='50px'
         />
       </InputGroup>
       <InputGroup width='492px' marginBottom='40px'>

@@ -7,6 +7,12 @@ import axios from 'axios';
 // apis
 import { signUpReq, checkUsernameReq } from '../../utils/authAPIs/authAPIs';
 
+import Label from '../../components/UI/InputLabel/InputLabel';
+import InputBox from '../../components/UI/InputBox/InputBox';
+import Button from '../../components/UI/Button/Button';
+import InputGroup from '../../components/UI/InputGroup/InputGroup';
+import FavSelect from '../../components/UI/FavButton/FavButton';
+
 import Step1 from './Step1';
 import Step2 from './Step2';
 
@@ -28,12 +34,15 @@ import {
   FavContainer,
 } from './style';
 
-const SignUpPage = () => {
+const NormalSignUpPage = () => {
+  const location = useLocation();
+
   const [step, setStep] = useState(1);
 
   const [userInfo, setUserInfo] = useState({
     name: '',
     email: '',
+    password: '',
     username: '',
     birthday: '',
     favorites: '',
@@ -51,6 +60,19 @@ const SignUpPage = () => {
     '스포츠 / 레저': false,
     기타: false,
   });
+
+  useEffect(() => {
+    const data = location.state.data.data;
+    console.log(data);
+
+    setUserInfo({
+      ...userInfo,
+      name: data.name,
+      email: data.email,
+      loginProvider: data.loginProvider,
+      snsId: data.snsId,
+    });
+  }, []);
 
   const formSubmitHandler = async (event) => {
     event.preventDefault();
@@ -85,4 +107,4 @@ const SignUpPage = () => {
   );
 };
 
-export default SignUpPage;
+export default NormalSignUpPage;
