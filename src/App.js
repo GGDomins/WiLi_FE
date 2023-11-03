@@ -22,7 +22,7 @@ import SignUpPage from './pages/SignUpPage/SignUpPage';
 import enTranslation from './locales/en.json';
 
 i18n.use(initReactI18next).init({
-  resousrces: {
+  resources: {
     en: { translation: enTranslation },
   },
   lng: 'en',
