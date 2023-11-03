@@ -177,3 +177,12 @@ export const Naver = styled.div`
     height: 47px;
   }
 `;
+
+export const Normal = styled.div`
+  font-size: 19px;
+  width: 100%;
+  height: 69px;
+  border-radius: 9px;
+  background-color: #d9d9d9;
+  cursor: pointer;
+`;

@@ -40,11 +40,11 @@ const useAuth = () => {
 
             localStorage.removeItem('accessToken');
             localStorage.removeItem('snsId');
-            navigate('/login');
+            navigate('/welcome');
           }
         } else {
           console.log('auth failed');
-          navigate('/login');
+          navigate('/welcome');
         }
       }
     };

@@ -8,7 +8,7 @@ import GlobalStyle from './styles/GlobalStyle';
 
 // pages
 import MyWishListPage from './pages/MyWishListPage/MyWishListPage';
-import LoginPage from './pages/LoginPage/LoginPage';
+import LandingPage from './pages/LandingPage/LandingPage';
 import NormalSignUpPage from './pages/NormalSignUpPage/NormalSignUpPage';
 import ProfilePage from './pages/ProfilePage/ProfilePage';
 import RandomFeedPage from './pages/RandomFeedPage/RandomFeedPage';
@@ -41,7 +41,7 @@ const App = () => {
       <Router>
         <Routes>
           <Route path='/' element={<MyWishListPage />} />
-          <Route path='/login' element={<LoginPage />} />
+          <Route path='/welcome' element={<LandingPage />} />
           <Route path='/signup' element={<SignUpPage />} />
           <Route path='/normal-signup' element={<NormalSignUpPage />} />
           <Route path='/profile' element={<ProfilePage />} />

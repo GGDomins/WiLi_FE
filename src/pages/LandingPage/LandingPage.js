@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 
 // login config
 import { NAVER_LINK, KAKAO_LINK } from '../../config/config';
@@ -13,9 +14,11 @@ import {
   ButtonInnerContainer,
   Naver,
   Kakao,
+  Normal,
 } from './style';
 
-const LoginPage = () => {
+const LandingPage = () => {
+  const navigate = useNavigate();
   const { t } = useTranslation();
 
   const kakaoLoginHandler = () => {
@@ -24,6 +27,10 @@ const LoginPage = () => {
 
   const naverLoginHandler = () => {
     window.location.href = NAVER_LINK;
+  };
+
+  const normalLoginHandler = () => {
+    navigate('/login');
   };
 
   return (
@@ -35,10 +42,11 @@ const LoginPage = () => {
         <ButtonInnerContainer>
           <Kakao onClick={kakaoLoginHandler} />
           <Naver onClick={naverLoginHandler} />
+          <Normal onClick={normalLoginHandler} />
         </ButtonInnerContainer>
       </ButtonContainer>
     </StyledContainer>
   );
 };
 
-export default LoginPage;
+export default LandingPage;
