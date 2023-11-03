@@ -35,8 +35,6 @@ import {
 } from './style';
 
 const NormalSignUpPage = () => {
-  const location = useLocation();
-
   const [step, setStep] = useState(1);
 
   const [userInfo, setUserInfo] = useState({
@@ -60,19 +58,6 @@ const NormalSignUpPage = () => {
     '스포츠 / 레저': false,
     기타: false,
   });
-
-  useEffect(() => {
-    const data = location.state.data.data;
-    console.log(data);
-
-    setUserInfo({
-      ...userInfo,
-      name: data.name,
-      email: data.email,
-      loginProvider: data.loginProvider,
-      snsId: data.snsId,
-    });
-  }, []);
 
   const formSubmitHandler = async (event) => {
     event.preventDefault();
