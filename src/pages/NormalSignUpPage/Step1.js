@@ -149,7 +149,7 @@ const Step1 = ({ setStep, setUserInfo, userInfo }) => {
     <>
       <Title>프로필 설정하기</Title>
       <SubTitle>시작하기 전 프로필 정보를 확인해 주세요.</SubTitle>
-      <InputGroup width='492px' marginBottom='100px'>
+      <InputGroup width='492px' marginBottom='30px'>
         <Label color='#6a6a6a' fontSize='19px' fontWeight='500'>
           이메일
         </Label>
@@ -166,7 +166,7 @@ const Step1 = ({ setStep, setUserInfo, userInfo }) => {
           height='50px'
         />
       </InputGroup>
-      <InputGroup width='492px' marginBottom='100px'>
+      <InputGroup width='492px' marginBottom='30px'>
         <Label color='#6a6a6a' fontSize='19px' fontWeight='500'>
           비밀번호
         </Label>
@@ -183,7 +183,7 @@ const Step1 = ({ setStep, setUserInfo, userInfo }) => {
           height='50px'
         />
       </InputGroup>
-      <InputGroup width='492px' marginBottom='100px'>
+      <InputGroup width='492px' marginBottom='30px'>
         <Label color='#6a6a6a' fontSize='19px' fontWeight='500'>
           비밀번호 확인
         </Label>
@@ -199,7 +199,7 @@ const Step1 = ({ setStep, setUserInfo, userInfo }) => {
           height='50px'
         />
       </InputGroup>
-      <InputGroup width='492px' marginBottom='100px'>
+      <InputGroup width='492px' marginBottom='30px'>
         <Label color='#6a6a6a' fontSize='19px' fontWeight='500'>
           이름
         </Label>
@@ -216,7 +216,7 @@ const Step1 = ({ setStep, setUserInfo, userInfo }) => {
           height='50px'
         />
       </InputGroup>
-      <InputGroup width='492px' marginBottom='40px'>
+      <InputGroup width='492px' marginBottom='30px'>
         <Label color='#6a6a6a' fontSize='19px' fontWeight='500'>
           유저네임
         </Label>
@@ -233,7 +233,7 @@ const Step1 = ({ setStep, setUserInfo, userInfo }) => {
           placeholder='wili_2023'
         />
       </InputGroup>
-      <InputGroup width='492px' marginBottom='100px'>
+      <InputGroup width='492px' marginBottom='30px'>
         <Label color='#6a6a6a' fontSize='19px' fontWeight='500'>
           생년월일
         </Label>
