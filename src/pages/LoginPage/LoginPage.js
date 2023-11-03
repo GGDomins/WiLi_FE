@@ -12,7 +12,7 @@ const LoginPage = () => {
   const formChangeHandler = (event) => {
     const { name, value } = event.target;
 
-    setForm((prev) => ({
+    setLoginCred((prev) => ({
       ...prev,
       [name]: value,
     }));
