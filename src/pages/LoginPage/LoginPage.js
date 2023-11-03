@@ -42,6 +42,9 @@ const LoginPage = () => {
             placeholder='비밀번호'
           />
           <button type='submit'>로그인</button>
+          <button type='button' onClick={() => navigate('/normal-signup')}>
+            회원가입하기
+          </button>
         </form>
       </LoginContainer>
     </StyledContainer>
