@@ -20,10 +20,12 @@ import NaverRedirection from './pages/RedirectionPage/NaverRedirection';
 import SignUpPage from './pages/SignUpPage/SignUpPage';
 
 import enTranslation from './locales/en.json';
+import krTranslation from './locales/kr.json';
 
 i18n.use(initReactI18next).init({
   resources: {
     en: { translation: enTranslation },
+    kr: { translation: krTranslation },
   },
   lng: 'en',
   fallbackLng: 'en',

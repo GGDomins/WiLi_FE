@@ -31,7 +31,7 @@ const LoginPage = () => {
       <Logo>WiLi</Logo>
       <TitleMessage>{t('Login.TitleMessage')}</TitleMessage>
       <ButtonContainer>
-        <LoginMessage>간편 로그인으로 빠르게 시작해보세요.</LoginMessage>
+        <LoginMessage>{t('Login.LoginMessage')}</LoginMessage>
         <ButtonInnerContainer>
           <Kakao onClick={kakaoLoginHandler} />
           <Naver onClick={naverLoginHandler} />
