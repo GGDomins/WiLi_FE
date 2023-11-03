@@ -179,10 +179,11 @@ export const Naver = styled.div`
   }
 `;
 
-export const Normal = styled.div`
+export const Normal = styled.button`
   font-size: 19px;
   width: 100%;
-  height: 69px;
+  height: 60px;
+  border: none;
   border-radius: 9px;
   background-color: #d9d9d9;
   cursor: pointer;
