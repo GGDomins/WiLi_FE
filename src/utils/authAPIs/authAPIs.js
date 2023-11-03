@@ -59,3 +59,18 @@ export const signUpReq = async (userInfo) => {
     console.log(error);
   }
 };
+
+export const normalSignUpReq = async (userInfo) => {
+  try {
+    const response = await axiosInstance.post(`/users/normal-signup`, userInfo);
+
+    console.log('success');
+
+    const accessToken = response.headers['accesstoken'];
+    localStorage.setItem('accessToken', accessToken);
+
+    window.location.href = '/';
+  } catch (error) {
+    console.log(error);
+  }
+};

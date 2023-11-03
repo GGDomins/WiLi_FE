@@ -158,7 +158,7 @@ const Step1 = ({ setStep, setUserInfo, userInfo }) => {
           name='email'
           width='353px'
           value={userInfo.email}
-          placeholder='생년월일을 입력하세요.'
+          placeholder='이메일을 입력하세요.'
           onChange={formChangeHandler}
           fontSize='19px'
           border='1px solid #d9d9d9'

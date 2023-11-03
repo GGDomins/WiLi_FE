@@ -5,7 +5,10 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import axios from 'axios';
 
 // apis
-import { signUpReq, checkUsernameReq } from '../../utils/authAPIs/authAPIs';
+import {
+  checkUsernameReq,
+  normalSignUpReq,
+} from '../../utils/authAPIs/authAPIs';
 
 import Step1 from './Step1';
 import Step2 from './Step2';
@@ -64,7 +67,7 @@ const SignUpPage = () => {
       favorites: updatedFavorites,
     };
 
-    signUpReq(data);
+    normalSignUpReq(data);
   };
 
   return (

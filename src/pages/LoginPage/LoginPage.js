@@ -1,3 +1,5 @@
+import { useTranslation } from 'react-i18next';
+
 // login config
 import { NAVER_LINK, KAKAO_LINK } from '../../config/config';
 
@@ -14,6 +16,8 @@ import {
 } from './style';
 
 const LoginPage = () => {
+  const { t } = useTranslation;
+
   const kakaoLoginHandler = () => {
     window.location.href = KAKAO_LINK;
   };
@@ -25,7 +29,7 @@ const LoginPage = () => {
   return (
     <StyledContainer>
       <Logo>WiLi</Logo>
-      <TitleMessage>내가 갖고싶은 모든 것들을 한 곳에!</TitleMessage>
+      <TitleMessage>{t('Login.TitleMessage')}</TitleMessage>
       <ButtonContainer>
         <LoginMessage>간편 로그인으로 빠르게 시작해보세요.</LoginMessage>
         <ButtonInnerContainer>

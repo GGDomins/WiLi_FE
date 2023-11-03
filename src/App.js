@@ -1,5 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
+import { initReactI18next } from 'react-i18next';
+import i18n from 'i18next';
+
 // global style
 import GlobalStyle from './styles/GlobalStyle';
 
@@ -15,6 +18,19 @@ import AddProductPage from './pages/AddProductPage/AddProductPage';
 import KakaoRedirection from './pages/RedirectionPage/KakaoRedirection';
 import NaverRedirection from './pages/RedirectionPage/NaverRedirection';
 import SignUpPage from './pages/SignUpPage/SignUpPage';
+
+import enTranslation from './locales/en.json';
+
+i18n.use(initReactI18next).init({
+  resousrces: {
+    en: { translation: enTranslation },
+  },
+  lng: 'en',
+  fallbackLng: 'en',
+  interpolation: {
+    escapeValue: false,
+  },
+});
 
 const App = () => {
   return (
