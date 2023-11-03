@@ -4,6 +4,8 @@ import { normalLoginReq } from '../../utils/authAPIs/authAPIs';
 import { StyledContainer, LoginContainer } from './style';
 
 const LoginPage = () => {
+  const navigate = useNavigate();
+
   const [loginCred, setLoginCred] = useState({
     email: '',
     password: '',
