@@ -6,7 +6,7 @@ import GlobalStyle from './styles/GlobalStyle';
 // pages
 import MyWishListPage from './pages/MyWishListPage/MyWishListPage';
 import LoginPage from './pages/LoginPage/LoginPage';
-import AdditionalSignUpPage from './pages/NormalSignUpPage/NormalSignUpPage';
+import NormalSignUpPage from './pages/NormalSignUpPage/NormalSignUpPage';
 import ProfilePage from './pages/ProfilePage/ProfilePage';
 import RandomFeedPage from './pages/RandomFeedPage/RandomFeedPage';
 import SearchPage from './pages/SearchPage/SearchPage';
@@ -14,6 +14,7 @@ import EditProductPage from './pages/EditProductPage/EditProductPage';
 import AddProductPage from './pages/AddProductPage/AddProductPage';
 import KakaoRedirection from './pages/RedirectionPage/KakaoRedirection';
 import NaverRedirection from './pages/RedirectionPage/NaverRedirection';
+import SignUpPage from './pages/SignUpPage/SignUpPage';
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
         <Routes>
           <Route path='/' element={<MyWishListPage />} />
           <Route path='/login' element={<LoginPage />} />
+          <Route path='/signup' element={<SignUpPage />} />
           <Route path='/normal-signup' element={<NormalSignUpPage />} />
           <Route path='/profile' element={<ProfilePage />} />
           <Route path='/add' element={<AddProductPage />} />
