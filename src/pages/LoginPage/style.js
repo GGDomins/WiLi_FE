@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { device } from '../../styles/screen/screen';
 
 import backgroundImage from '../../assets/etc/background-desktop.png';
 
