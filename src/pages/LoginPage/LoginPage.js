@@ -16,7 +16,7 @@ import {
 } from './style';
 
 const LoginPage = () => {
-  const { t } = useTranslation;
+  const { t } = useTranslation();
 
   const kakaoLoginHandler = () => {
     window.location.href = KAKAO_LINK;
