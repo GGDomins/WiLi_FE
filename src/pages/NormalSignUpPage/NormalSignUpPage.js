@@ -5,7 +5,11 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import axios from 'axios';
 
 // apis
-import { signUpReq, checkUsernameReq } from '../../utils/authAPIs/authAPIs';
+import {
+  signUpReq,
+  checkUsernameReq,
+  normalSignUpReq,
+} from '../../utils/authAPIs/authAPIs';
 
 import Label from '../../components/UI/InputLabel/InputLabel';
 import InputBox from '../../components/UI/InputBox/InputBox';
