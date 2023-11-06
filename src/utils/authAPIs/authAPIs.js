@@ -51,10 +51,10 @@ export const signUpReq = async (userInfo) => {
 
     console.log('success');
 
-    const accessToken = response.headers['accesstoken'];
-    localStorage.setItem('accessToken', accessToken);
+    // const accessToken = response.headers['accesstoken'];
+    // localStorage.setItem('accessToken', accessToken);
 
-    window.location.href = '/';
+    window.location.href = '/login';
   } catch (error) {
     console.log(error);
   }
