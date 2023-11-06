@@ -69,6 +69,7 @@ const NormalSignUpPage = () => {
     const data = {
       ...userInfo,
       favorites: updatedFavorites,
+      snsId: Math.random().toString(36).slice(2, 11),
     };
 
     signUpReq(data);
