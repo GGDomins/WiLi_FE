@@ -1,4 +1,6 @@
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+
 import { ToolBarContainer, Title, ButtonContainer, Filter } from './style';
 import IconButton from '../IconButton/IconButton';
 import add from '../../../assets/icons/add.svg';
@@ -6,6 +8,7 @@ import editprofile from '../../../assets/icons/settings.svg';
 
 const ToolBar = ({ onChooseSort }) => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const filterChangeHandler = (event) => {
     const selectedValue = event.target.value;
@@ -18,10 +21,10 @@ const ToolBar = ({ onChooseSort }) => {
       <ButtonContainer>
         <Filter onChange={filterChangeHandler}>
           <option value='' selected disabled hidden>
-            필터 선택하기
+            {t('ToolBar.Select')}
           </option>
-          <option value='month'>월별로 제품 보기</option>
-          <option value='category'>카테고리별로 제품 보기</option>
+          <option value='month'>{t('ToolBar.Month')}</option>
+          <option value='category'>{t('ToolBar.Category')}</option>
         </Filter>
         <IconButton onClick={() => navigate('/add')} icon={`${add}`} />
         <IconButton

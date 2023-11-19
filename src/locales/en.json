@@ -18,5 +18,10 @@
   "Toggle": {
     "RandomFeed": "Feed",
     "Profile": "My List"
+  },
+  "Toolbar": {
+    "Select": "Choose sort",
+    "Month": "Sort by month",
+    "Category": "Sort by category"
   }
 }
