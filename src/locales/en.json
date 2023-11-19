@@ -19,7 +19,7 @@
     "RandomFeed": "Feed",
     "Profile": "My List"
   },
-  "Toolbar": {
+  "ToolBar": {
     "Select": "Choose sort",
     "Month": "Sort by month",
     "Category": "Sort by category"
