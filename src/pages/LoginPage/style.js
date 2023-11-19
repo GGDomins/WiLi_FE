@@ -24,7 +24,7 @@ export const LoginContainer = styled.div`
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   border-radius: 26px;
   width: 612px;
-  height: 350px;
+  height: 500px;
 
   @media ${device.wideLaptop} {
     width: 500px;
@@ -56,26 +56,30 @@ export const Title = styled.h1`
 `;
 
 export const EmailInput = styled.input`
+  font-size: 18px;
   width: 400px;
   height: 50px;
   border: 1px solid #bdbdbd;
   border-radius: 10px;
+  padding: 0 10px;
 `;
 
 export const PasswordInput = styled.input`
+  font-size: 18px;
   width: 400px;
   height: 50px;
   border: 1px solid #bdbdbd;
   border-radius: 10px;
   margin-top: 20px;
+  padding: 0 10px;
 `;
 
 export const LoginButton = styled.button`
   width: 400px;
   height: 50px;
   border-radius: 10px;
-  background-color: #ffd600;
-  color: #fff;
+  background-color: #4c67db;
+  color: #000;
   font-size: 18px;
   font-weight: 700;
   margin-top: 20px;
@@ -85,8 +89,8 @@ export const SignupButton = styled.button`
   width: 400px;
   height: 50px;
   border-radius: 10px;
-  background-color: #ffd600;
-  color: #fff;
+  background-color: #d3d3d3;
+  color: #000;
   font-size: 18px;
   font-weight: 700;
   margin-top: 20px;
