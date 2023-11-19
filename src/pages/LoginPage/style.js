@@ -41,3 +41,53 @@ export const LoginContainer = styled.div`
     height: 220px;
   }
 `;
+
+export const Form = styled.form`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const Title = styled.h1`
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+`;
+
+export const EmailInput = styled.input`
+  width: 400px;
+  height: 50px;
+  border: 1px solid #bdbdbd;
+  border-radius: 10px;
+`;
+
+export const PasswordInput = styled.input`
+  width: 400px;
+  height: 50px;
+  border: 1px solid #bdbdbd;
+  border-radius: 10px;
+  margin-top: 20px;
+`;
+
+export const LoginButton = styled.button`
+  width: 400px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: #ffd600;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 20px;
+`;
+
+export const SignupButton = styled.button`
+  width: 400px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: #ffd600;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 20px;
+`;

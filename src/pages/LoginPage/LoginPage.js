@@ -3,7 +3,16 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import { normalLoginReq } from '../../utils/authAPIs/authAPIs';
-import { StyledContainer, LoginContainer } from './style';
+import {
+  StyledContainer,
+  LoginContainer,
+  Form,
+  Title,
+  EmailInput,
+  PasswordInput,
+  LoginButton,
+  SignupButton,
+} from './style';
 
 const LoginPage = () => {
   const navigate = useNavigate();
@@ -31,25 +40,28 @@ const LoginPage = () => {
   return (
     <StyledContainer>
       <LoginContainer>
-        <h1>로그인</h1>
-        <form onSubmit={formSubmitHandler}>
-          <input
+        <Title>로그인</Title>
+        <Form onSubmit={formSubmitHandler}>
+          <EmailInput
             type='text'
             onChange={formChangeHandler}
             name='email'
             placeholder='이메일'
           />
-          <input
+          <PasswordInput
             type='password'
             onChange={formChangeHandler}
             name='password'
             placeholder='비밀번호'
           />
-          <button type='submit'>로그인</button>
-          <button type='button' onClick={() => navigate('/normal-signup')}>
+          <LoginButton type='submit'>로그인</LoginButton>
+          <SignupButton
+            type='button'
+            onClick={() => navigate('/normal-signup')}
+          >
             회원가입하기
-          </button>
-        </form>
+          </SignupButton>
+        </Form>
       </LoginContainer>
     </StyledContainer>
   );
