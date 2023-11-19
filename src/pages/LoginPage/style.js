@@ -84,6 +84,7 @@ export const LoginButton = styled.button`
   font-size: 18px;
   font-weight: 400;
   margin-top: 20px;
+  cursor: pointer;
 `;
 
 export const SignupButton = styled.button`
@@ -96,4 +97,5 @@ export const SignupButton = styled.button`
   font-size: 18px;
   font-weight: 200;
   margin-top: 20px;
+  cursor: pointer;
 `;
