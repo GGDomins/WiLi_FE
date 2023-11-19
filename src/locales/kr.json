@@ -32,7 +32,8 @@
     "Category": "내 관심사",
     "Delete": "계정 삭제하기",
     "Logout": "로그아웃",
-    "Save": "저장"
+    "Save": "저장",
+    "Withdrawl": "계정 삭제하기"
   },
   "AddProduct": {
     "Title": "제품 추가하기",

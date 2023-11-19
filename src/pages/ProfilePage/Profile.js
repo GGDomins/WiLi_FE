@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
+import { useTranslation } from 'react-i18next';
 import { logoutReq } from '../../utils/authAPIs/authAPIs';
 
 // components
@@ -24,12 +25,7 @@ import FavButton from '../../components/UI/FavButton/FavButton';
 import Header from '../../components/Header/Header';
 
 const Profile = () => {
-  const DEFAULT = '#d9d9d9';
-  const SUCCESS = '#4CAF50';
-  const FAIL = '#f44336';
-
-  const CLICKED = '#4c67db';
-  const NOT_CLICKED = '#b0bfff';
+  const { t } = useTranslation();
 
   const id = localStorage.getItem('snsId');
   const navigate = useNavigate();
@@ -187,13 +183,12 @@ const Profile = () => {
           <form onSubmit={formSubmitHandler}>
             <InputContainer>
               <InputGroup width='493px'>
-                <Label color='#6a6a6a'>이름</Label>
+                <Label color='#6a6a6a'>{t('Profile.Name')}</Label>
                 <InputBox
                   name='name'
                   type='text'
                   value={userInfo.name}
                   onChange={formChangeHandler}
-                  placeholder='윌리'
                   width='353px'
                   height='52px'
                   border='1px solid #d9d9d9'
@@ -202,13 +197,12 @@ const Profile = () => {
                 />
               </InputGroup>
               <InputGroup width='493px'>
-                <Label color='#6a6a6a'>유저네임</Label>
+                <Label color='#6a6a6a'>{t('ProductInfo.Username')}</Label>
                 <InputBox
                   name='username'
                   type='text'
                   value={userInfo.username}
                   onChange={formChangeHandler}
-                  placeholder='wili_2023'
                   width='353px'
                   height='52px'
                   border='1px solid #d9d9d9'
@@ -216,13 +210,12 @@ const Profile = () => {
                 />
               </InputGroup>
               <InputGroup width='493px'>
-                <Label color='#6a6a6a'>이메일</Label>
+                <Label color='#6a6a6a'>{t('ProductInfo.Email')}</Label>
                 <InputBox
                   name='email'
                   type='text'
                   value={userInfo.email}
                   onChange={formChangeHandler}
-                  placeholder='wili@gmail.com'
                   width='353px'
                   height='52px'
                   border='1px solid #d9d9d9'
@@ -231,13 +224,12 @@ const Profile = () => {
                 />
               </InputGroup>
               <InputGroup width='493px'>
-                <Label color='#6a6a6a'>생년월일</Label>
+                <Label color='#6a6a6a'>{t('ProductInfo.Birthday')}</Label>
                 <InputBox
                   name='birthday'
                   type='date'
                   value={userInfo.birthday}
                   onChange={formChangeHandler}
-                  placeholder='2021-01-01'
                   width='353px'
                   height='52px'
                   border='1px solid #d9d9d9'
@@ -246,7 +238,7 @@ const Profile = () => {
               </InputGroup>
             </InputContainer>
             <FavGroup>
-              <Label color='#6a6a6a'>내 관심사</Label>
+              <Label color='#6a6a6a'>{t('ProductInfo.Category')}</Label>
               <FavContainer>
                 {Object.keys(fav).map((key) => {
                   return (
@@ -272,7 +264,7 @@ const Profile = () => {
                 backgroundColor='#b0bfff'
                 float='right'
               >
-                저장
+                {t('ProductInfo.Save')}
               </Button>
               <Button
                 type='button'
@@ -283,7 +275,7 @@ const Profile = () => {
                 backgroundColor='#fff'
                 float='right'
               >
-                로그아웃
+                {t('ProductInfo.Logout')}
               </Button>
               <Button
                 type='button'
@@ -292,7 +284,7 @@ const Profile = () => {
                 height='50px'
                 borderRadius='60px'
               >
-                계정 삭제하기
+                {t('ProductInfo.Withdrawl')}
               </Button>
             </ButtonContainer>
           </form>
