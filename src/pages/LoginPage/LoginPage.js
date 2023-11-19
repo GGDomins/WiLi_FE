@@ -19,6 +19,7 @@ import {
 
 const LoginPage = () => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const [loginCred, setLoginCred] = useState({
     email: '',

@@ -3,5 +3,20 @@
     "TitleMessage": "내가 갖고싶은 모든 것들을 한 곳에!",
     "LoginMessage": "간편 로그인으로 빠르게 시작해보세요.",
     "NormalLogin": "일반 로그인"
+  },
+  "NormalLogin": {
+    "Title": "로그인하기",
+    "Email": "이메일을 입력하세요.",
+    "Password": "비밀번호를 입력하세요",
+    "Login": "로그인",
+    "Signup": "회원가입하기"
+  },
+  "SearchBar" : {
+    "Placeholder": "검색어를 입력하세요.",
+    "Button": "검색"
+  },
+  "Toggle": {
+    "RandomFeed": "랜덤피드",
+    "Profile": "내리스트"
   }
 }

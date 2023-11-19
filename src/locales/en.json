@@ -10,5 +10,13 @@
     "Password": "Password",
     "Login": "Login",
     "Signup": "Signup"
+  },
+  "SearchBar": {
+    "Placeholder": "Search for anything",
+    "Button": "Search"
+  },
+  "Toggle": {
+    "RandomFeed": "Feed",
+    "Profile": "My List"
   }
 }

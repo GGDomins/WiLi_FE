@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 
 import styled from 'styled-components';
@@ -14,6 +15,8 @@ import {
 
 const SearchBar = () => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
+
   const [query, setQuery] = useState('');
 
   const queryChangeHandler = (event) => {
@@ -30,10 +33,10 @@ const SearchBar = () => {
     <SearchContainer onSubmit={querySubmitHandler}>
       <SearchIcon src={search} alt='search' />
       <SearchInput
-        placeholder='검색어를 입력하세요'
+        placeholder={t('SearchBar.Placeholder')}
         onChange={queryChangeHandler}
       />
-      <SearchButton type='submit'>검색하기</SearchButton>
+      <SearchButton type='submit'>{t('SearchBar.Button')}</SearchButton>
     </SearchContainer>
   );
 };
