@@ -3,5 +3,12 @@
     "TitleMessage": "Archive everything you want in one app.",
     "LoginMessage": "Login or signup to try this out!",
     "NormalLogin": "Normal Login"
+  },
+  "NormalLogin": {
+    "Title": "Login",
+    "Email": "Email",
+    "Password": "Password",
+    "Login": "Login",
+    "Signup": "Signup"
   }
 }

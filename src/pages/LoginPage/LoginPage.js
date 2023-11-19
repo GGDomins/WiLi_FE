@@ -1,4 +1,7 @@
+import { t } from 'i18next';
 import React, { useState } from 'react';
+
+import { useTranslation } from 'react-i18next';
 
 import { useNavigate } from 'react-router-dom';
 
@@ -40,26 +43,26 @@ const LoginPage = () => {
   return (
     <StyledContainer>
       <LoginContainer>
-        <Title>로그인</Title>
+        <Title>{t('NormalLogin.Title')}</Title>
         <Form onSubmit={formSubmitHandler}>
           <EmailInput
             type='text'
             onChange={formChangeHandler}
             name='email'
-            placeholder='이메일'
+            placeholder={t('NormalLogin.Email')}
           />
           <PasswordInput
             type='password'
             onChange={formChangeHandler}
             name='password'
-            placeholder='비밀번호'
+            placeholder={t('NormalLogin.Password')}
           />
-          <LoginButton type='submit'>로그인</LoginButton>
+          <LoginButton type='submit'>{t('NormalLogin.Login')}</LoginButton>
           <SignupButton
             type='button'
             onClick={() => navigate('/normal-signup')}
           >
-            회원가입하기
+            {t('NormalLogin.Signup')}
           </SignupButton>
         </Form>
       </LoginContainer>
