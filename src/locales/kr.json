@@ -47,7 +47,8 @@
     "DescriptionPlaceholder": "제품에 대한 메모를 입력하세요.",
     "Link": "링크",
     "LinkPlaceholder": "http://nike.com",
-    "Add": "제품 추가하기",
-    "Cancel": "취소"
+    "AddButton": "제품 추가하기",
+    "CancelButton": "취소",
+    "EditButton": "수정하기"
   }
 }

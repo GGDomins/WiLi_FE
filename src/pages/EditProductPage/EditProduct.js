@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 
+import { useTranslation } from 'react-i18next';
+
 // components
 import Header from '../../components/Header/Header';
 
@@ -31,6 +33,7 @@ import {
 
 const EditProduct = () => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const { id } = useParams();
 
@@ -82,7 +85,7 @@ const EditProduct = () => {
   return (
     <>
       <ProductContainer>
-        <Title>제품 수정하기</Title>
+        <Title>{t('ProductInfo.EditTitle')}</Title>
         <form onSubmit={formSubmitHandler}>
           <InputContainer>
             <div>
@@ -90,13 +93,13 @@ const EditProduct = () => {
             </div>
             <InputInnerContainer>
               <InputGroup width='493px'>
-                <Label>브랜드</Label>
+                <Label>{t('ProductInfo.Brand')}</Label>
                 <InputBox
                   name='brandName'
                   value={productInfo.brandName}
                   onChange={formChangeHandler}
                   type='text'
-                  placeholder='나이키'
+                  placeholder={t('ProductInfo.BrandPlaceholder')}
                   width='353px'
                   height='50px'
                   border='1px solid #D9D9D9'
@@ -104,13 +107,13 @@ const EditProduct = () => {
                 />
               </InputGroup>
               <InputGroup width='493px'>
-                <Label>제품명</Label>
+                <Label>{t('ProductInfo.Name')}</Label>
                 <InputBox
                   name='productName'
                   value={productInfo.productName}
                   onChange={formChangeHandler}
                   type='text'
-                  placeholder='에어포스 1 쉐도우'
+                  placeholder={t('ProductInfo.NamePlaceholder')}
                   width='353px'
                   height='50px'
                   border='1px solid #D9D9D9'
@@ -118,7 +121,7 @@ const EditProduct = () => {
                 />
               </InputGroup>
               <InputGroup width='493px'>
-                <Label>카테고리</Label>
+                <Label>{t('ProductInfo.Category')}</Label>
                 <Category
                   name='category'
                   value={productInfo.category}
@@ -138,23 +141,23 @@ const EditProduct = () => {
                 </Category>
               </InputGroup>
               <TextAreaGroup>
-                <Label color='#6a6a6a'>메모</Label>
+                <Label color='#6a6a6a'>{t('ProductInfo.Description')}</Label>
                 <TextArea
                   name='description'
                   value={productInfo.description}
                   onChange={formChangeHandler}
                   type='text'
-                  placeholder='제품에 대한 메모를 자유롭게 남겨주세요!'
+                  placeholder={t('ProductInfo.DescriptionPlaceholder')}
                 />
               </TextAreaGroup>
               <InputGroup width='493px'>
-                <Label>가격</Label>
+                <Label>{t('ProductInfo.Price')}</Label>
                 <InputBox
                   name='productPrice'
                   value={productInfo.productPrice}
                   onChange={formChangeHandler}
                   type='text'
-                  placeholder='₩100000'
+                  placeholder={t('ProductInfo.PricePlaceholder')}
                   width='353px'
                   height='50px'
                   border='1px solid #D9D9D9'
@@ -162,13 +165,13 @@ const EditProduct = () => {
                 />
               </InputGroup>
               <InputGroup width='493px'>
-                <Label>링크</Label>
+                <Label>{t('ProductInfo.Link')}</Label>
                 <InputBox
                   name='link'
                   value={productInfo.link}
                   onChange={formChangeHandler}
                   type='text'
-                  placeholder='www.nike.com'
+                  placeholder={t('ProductInfo.LinkPlaceholder')}
                   width='353px'
                   height='50px'
                   border='1px solid #D9D9D9'
@@ -187,7 +190,7 @@ const EditProduct = () => {
               borderRadius='21px'
               float='right'
             >
-              제품 추가하기
+              {t('ProductInfo.AddButton')}
             </Button>
             <Button
               width='200px'
@@ -197,7 +200,7 @@ const EditProduct = () => {
               onClick={() => navigate('/')}
               float='right'
             >
-              취소
+              {t('ProductInfo.CancelButton')}
             </Button>
           </ButtonContainer>
         </form>
