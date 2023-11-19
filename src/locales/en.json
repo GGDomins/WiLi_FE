@@ -1,6 +1,7 @@
 {
   "Login" : {
     "TitleMessage": "Archive everything you want in one app.",
-    "LoginMessage": "Login or signup to try this out!"
+    "LoginMessage": "Login or signup to try this out!",
+    "NormalLogin": "Normal Login"
   }
 }

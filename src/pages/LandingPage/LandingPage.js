@@ -42,7 +42,7 @@ const LandingPage = () => {
         <ButtonInnerContainer>
           <Kakao onClick={kakaoLoginHandler} />
           <Naver onClick={naverLoginHandler} />
-          <Normal onClick={normalLoginHandler}>일반 로그인</Normal>
+          <Normal onClick={normalLoginHandler}>{t('Login.NormalLogin')}</Normal>
         </ButtonInnerContainer>
       </ButtonContainer>
     </StyledContainer>

@@ -1,6 +1,7 @@
 {
   "Login" : {
     "TitleMessage": "내가 갖고싶은 모든 것들을 한 곳에!",
-    "LoginMessage": "간편 로그인으로 빠르게 시작해보세요."
+    "LoginMessage": "간편 로그인으로 빠르게 시작해보세요.",
+    "NormalLogin": "일반 로그인"
   }
 }
