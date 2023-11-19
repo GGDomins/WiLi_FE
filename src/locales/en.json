@@ -49,7 +49,7 @@
     "DescriptionPlaceholder": "Enter description about the product",
     "Link": "Link",
     "LinkPlaceholder": "https://www.nike.com",
-    "Add": "Add",
-    "Cancel": "Cancel"
+    "AddButton": "Add",
+    "CancelButton": "Cancel"
   }
 }
