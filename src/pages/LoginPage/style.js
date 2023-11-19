@@ -24,7 +24,7 @@ export const LoginContainer = styled.div`
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   border-radius: 26px;
   width: 612px;
-  height: 500px;
+  height: 900px;
 
   @media ${device.wideLaptop} {
     width: 500px;
@@ -77,21 +77,23 @@ export const PasswordInput = styled.input`
 export const LoginButton = styled.button`
   width: 400px;
   height: 50px;
+  border: none;
   border-radius: 10px;
   background-color: #4c67db;
   color: #000;
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 400;
   margin-top: 20px;
 `;
 
 export const SignupButton = styled.button`
   width: 400px;
   height: 50px;
+  border: none;
   border-radius: 10px;
   background-color: #d3d3d3;
   color: #000;
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 200;
   margin-top: 20px;
 `;
