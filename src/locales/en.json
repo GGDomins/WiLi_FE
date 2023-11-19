@@ -23,5 +23,33 @@
     "Select": "Choose sort",
     "Month": "Sort by month",
     "Category": "Sort by category"
+  },
+  "Profile": {
+    "Name": "Name",
+    "Username": "Username",
+    "Email": "Email",
+    "Birthday": "Birthday",
+    "Category": "My Category",
+    "Delete": "Delete",
+    "Logout": "Logout",
+    "Save": "Save"
+  },
+  "ProductInfo": {
+    "AddTitle": "Add Product",
+    "EditTitle": "Edit Product",
+    "Brand": "Brand",
+    "BrandPlaceholder": "Nike",
+    "Name": "Product Name",
+    "NamePlaceholder": "Air force 1",
+    "Category": "Category",
+    "CategoryPlaceholder": "Enter category",
+    "Price": "Price",
+    "PricePlaceholder": "£100",
+    "Description": "Description",
+    "DescriptionPlaceholder": "Enter description about the product",
+    "Link": "Link",
+    "LinkPlaceholder": "https://www.nike.com",
+    "Add": "Add",
+    "Cancel": "Cancel"
   }
 }

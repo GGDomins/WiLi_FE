@@ -23,5 +23,31 @@
     "Select": "필터 선택하기",
     "Month": "월별로 제품 보기",
     "Category": "카테고리별로 제품 보기"
+  },
+  "Profile": {
+    "Name": "이름",
+    "Username": "유저네임",
+    "Email": "이메일",
+    "Birthday": "생년월일",
+    "Category": "내 관심사",
+    "Delete": "계정 삭제하기",
+    "Logout": "로그아웃",
+    "Save": "저장"
+  },
+  "AddProduct": {
+    "Title": "제품 추가하기",
+    "Brand": "브랜드",
+    "BrandPlaceholder": "나이키",
+    "Name": "제품명",
+    "NamePlaceholder": "에어맥스 97",
+    "Category": "카테고리",
+    "Price": "가격",
+    "PricePlaceholder": "₩100,000",
+    "Description": "메모",
+    "DescriptionPlaceholder": "제품에 대한 메모를 입력하세요.",
+    "Link": "링크",
+    "LinkPlaceholder": "http://nike.com",
+    "Add": "제품 추가하기",
+    "Cancel": "취소"
   }
 }

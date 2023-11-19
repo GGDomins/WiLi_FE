@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 import styled from 'styled-components';
 
@@ -29,6 +30,7 @@ import { addProductReq } from '../../utils/productAPIs/productAPIs';
 const Textarea = styled.textarea``;
 
 const AddProduct = () => {
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const photoInput = useRef();
   const [file, setFile] = useState(null);
@@ -91,7 +93,7 @@ const AddProduct = () => {
   return (
     <>
       <ProductContainer>
-        <Title>제품 추가하기</Title>
+        <Title>{t('ProductInfo.AddTitle')}</Title>
         <form onSubmit={formSubmitHandler}>
           <InputContainer>
             <div>
@@ -114,12 +116,12 @@ const AddProduct = () => {
             </div>
             <InputInnerContainer>
               <InputGroup width='493px'>
-                <Label color='#6a6a6a'>브랜드</Label>
+                <Label color='#6a6a6a'>{t('ProductInfo.Brand')}</Label>
                 <InputBox
                   name='brandName'
                   onChange={formChangeHandler}
                   type='text'
-                  placeholder='나이키'
+                  placeholder={t('ProductInfo.BrandPlaceholder')}
                   width='353px'
                   height='50px'
                   border='1px solid #D9D9D9'
@@ -127,12 +129,12 @@ const AddProduct = () => {
                 />
               </InputGroup>
               <InputGroup width='493px'>
-                <Label color='#6a6a6a'>제품명</Label>
+                <Label color='#6a6a6a'>{t('ProductInfo.Name')}</Label>
                 <InputBox
                   name='productName'
                   onChange={formChangeHandler}
                   type='text'
-                  placeholder='에어포스 1 쉐도우'
+                  placeholder={t('ProductInfo.NamePlaceholder')}
                   width='353px'
                   height='50px'
                   border='1px solid #D9D9D9'
@@ -140,7 +142,7 @@ const AddProduct = () => {
                 />
               </InputGroup>
               <InputGroup width='493px'>
-                <Label color='#6a6a6a'>카테고리</Label>
+                <Label color='#6a6a6a'>{t('ProductInfo.Category')}</Label>
                 <select
                   name='category'
                   onChange={formChangeHandler}
@@ -165,21 +167,21 @@ const AddProduct = () => {
                 </select>
               </InputGroup>
               <TextAreaGroup>
-                <Label color='#6a6a6a'>메모</Label>
+                <Label color='#6a6a6a'>{t('ProductInfo.Description')}</Label>
                 <TextArea
                   name='description'
                   onChange={formChangeHandler}
                   type='text'
-                  placeholder='제품에 대한 메모를 자유롭게 남겨주세요!'
+                  placeholder={t('ProductInfo.DescriptionPlaceholder')}
                 />
               </TextAreaGroup>
               <InputGroup width='493px'>
-                <Label color='#6a6a6a'>가격</Label>
+                <Label color='#6a6a6a'>{t('ProductInfo.Price')}</Label>
                 <InputBox
                   name='productPrice'
                   onChange={formChangeHandler}
                   type='text'
-                  placeholder='₩100000'
+                  placeholder='100,000'
                   width='353px'
                   height='50px'
                   border='1px solid #D9D9D9'
@@ -187,12 +189,12 @@ const AddProduct = () => {
                 />
               </InputGroup>
               <InputGroup width='493px'>
-                <Label color='#6a6a6a'>링크</Label>
+                <Label color='#6a6a6a'>{t('ProductInfo.Link')}</Label>
                 <InputBox
                   name='link'
                   onChange={formChangeHandler}
                   type='text'
-                  placeholder='www.nike.com'
+                  placeholder={t('ProductInfo.LinkPlaceholder')}
                   width='353px'
                   height='50px'
                   border='1px solid #D9D9D9'
@@ -211,7 +213,7 @@ const AddProduct = () => {
               borderRadius='21px'
               float='right'
             >
-              제품 추가하기
+              {t('ProductInfo.Add')}
             </Button>
             <Button
               width='200px'
@@ -221,7 +223,7 @@ const AddProduct = () => {
               onClick={() => navigate('/')}
               float='right'
             >
-              취소
+              {t('ProductInfo.Cancel')}
             </Button>
           </ButtonContainer>
         </form>
