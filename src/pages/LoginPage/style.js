@@ -24,16 +24,16 @@ export const LoginContainer = styled.div`
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   border-radius: 26px;
   width: 612px;
-  height: 900px;
+  height: 800px;
 
   @media ${device.wideLaptop} {
     width: 500px;
-    height: 350px;
+    height: 600px;
   }
 
   @media ${device.tablet} {
     width: 400px;
-    height: 200px;
+    height: 500px;
   }
 
   @media ${device.mobile} {
